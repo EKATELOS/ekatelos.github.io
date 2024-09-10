@@ -6,12 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Nossa Empresa</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        @import url('https://fonts.googleapis.com/css?family=Poiret+One|Source+Sans+Pro');
+
+        body, html {
+            height: 100%;
             margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            font-family: 'Source Sans Pro', sans-serif;
+            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+            color: #ecf0f1;
+            display: flex;
+            flex-direction: column;
         }
 
         header {
@@ -19,10 +23,13 @@
             color: #fff;
             padding: 20px;
             text-align: center;
+            font-family: 'Poiret One', cursive;
+            border-bottom: 2px solid #1a1a2e;
         }
 
         header h1 {
             margin: 0;
+            font-size: 2.5rem;
         }
 
         section {
@@ -30,12 +37,21 @@
             margin: 20px auto;
             max-width: 1200px;
             background-color: #fff;
+            color: #333;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
 
-        h2 {
+        section h2 {
             color: #333;
             margin-top: 0;
+            font-family: 'Poiret One', cursive;
+            font-size: 2rem;
+        }
+
+        section h3 {
+            color: #333;
+            font-size: 1.5rem;
         }
 
         p {
@@ -52,17 +68,44 @@
             color: #fff;
             margin-bottom: 10px;
             padding: 10px;
+            border-radius: 5px;
+        }
+
+        .quote-button, .about-us-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ececec;
+            color: #333;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: transform 0.2s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .quote-button:hover, .about-us-button:hover {
+            transform: scale(1.05);
         }
 
         footer {
-            background-color: #333;
-            color: #fff;
+            background-color: #f1f1f1;
+            padding: 20px;
             text-align: center;
-            padding: 10px;
+            color: #090a0f;
+            margin-top: auto;
+            width: 100%;
+            z-index: 999;
         }
 
         footer p {
-            margin: 0;
+            margin: 5px 0;
+        }
+
+        footer a {
+            font-size: xx-small;
+            color: whitesmoke;
         }
     </style>
 </head>
@@ -73,94 +116,91 @@
         <h1>Sobre Nossa Empresa</h1>
     </header>
 
-    <section>
-        <h2>Cultura da Empresa</h2>
-        <p>Na nossa empresa, estamos comprometidos em resolver os desafios relacionados à força de trabalho que podem
-            comprometer a confiabilidade e a eficiência dos negócios. Acreditamos que a solução para esses problemas vai
-            além do aspecto técnico, exigindo um entendimento profundo das dinâmicas humanas e organizacionais.</p>
+    <main>
+        <section>
+            <h2>Cultura da Empresa</h2>
+            <p>Na nossa empresa, estamos comprometidos em resolver os desafios relacionados à força de trabalho que podem comprometer a confiabilidade e a eficiência dos negócios. Acreditamos que a solução para esses problemas vai além do aspecto técnico, exigindo um entendimento profundo das dinâmicas humanas e organizacionais.</p>
 
-        <h3>Excelência Técnica e Humana</h3>
-        <p>Nosso compromisso é com a excelência técnica e humana, além de um desenvolvimento contínuo e colaborativo.</p>
+            <h3>Excelência Técnica e Humana</h3>
+            <p>Nosso compromisso é com a excelência técnica e humana, além de um desenvolvimento contínuo e colaborativo.</p>
 
-        <h3>Objetivos Internos e Princípios</h3>
-        <p><em>"Podemos resolver o que você pode pensar"</em></p>
-        <p>Confiança e qualidade em cada etapa!</p>
-    </section>
+            <h3>Objetivos Internos e Princípios</h3>
+            <p><em>"Podemos resolver o que você pode pensar"</em></p>
+            <p>Confiança e qualidade em cada etapa!</p>
+        </section>
 
-    <section>
-        <h2>Nossas Especialidades</h2>
-        <ul>
-            <li>UI/UX</li>
-            <li>Cloud</li>
-            <li>Infraestrutura</li>
-            <li>CI/CD</li>
-            <li>AI & Machine Learning</li>
-            <li>Design</li>
-        </ul>
-    </section>
+        <section>
+            <h2>Nossas Especialidades</h2>
+            <ul>
+                <li>UI/UX</li>
+                <li>Cloud</li>
+                <li>Infraestrutura</li>
+                <li>CI/CD</li>
+                <li>AI & Machine Learning</li>
+                <li>Design</li>
+            </ul>
+        </section>
 
-    <section>
-        <h2>O que Oferecemos</h2>
-        <p>Consultoria e Planejamento: cuidamos de toda a parte técnica do seu projeto.</p>
-        <p>Execução Sem Preocupações: oferecemos mão de obra qualificada para atender aos principais requisitos.</p>
-    </section>
+        <section>
+            <h2>O que Oferecemos</h2>
+            <p>Consultoria e Planejamento: cuidamos de toda a parte técnica do seu projeto.</p>
+            <p>Execução Sem Preocupações: oferecemos mão de obra qualificada para atender aos principais requisitos.</p>
+        </section>
 
-    <section>
-        <h2>Por Que Escolher Nossa Empresa</h2>
-        <p>Escolha-nos para transformar a eficiência do seu negócio!</p>
-        <ul>
-            <li><strong>Desenvolvimento de Software:</strong> Construímos soluções completas para a gestão específica do seu
-                negócio.</li>
-            <li><strong>Soluções Personalizadas:</strong> Criamos soluções adaptadas às suas necessidades exclusivas.</li>
-            <li><strong>Automação de Processos:</strong> Implementamos automações para processos internos ineficientes.</li>
-            <li><strong>Melhoria da Eficiência:</strong> Otimizamos a eficiência geral do seu negócio.</li>
-        </ul>
+        <section>
+            <h2>Por Que Escolher Nossa Empresa</h2>
+            <p>Escolha-nos para transformar a eficiência do seu negócio!</p>
+            <ul>
+                <li><strong>Desenvolvimento de Software:</strong> Construímos soluções completas para a gestão específica do seu negócio.</li>
+                <li><strong>Soluções Personalizadas:</strong> Criamos soluções adaptadas às suas necessidades exclusivas.</li>
+                <li><strong>Automação de Processos:</strong> Implementamos automações para processos internos ineficientes.</li>
+                <li><strong>Melhoria da Eficiência:</strong> Otimizamos a eficiência geral do seu negócio.</li>
+            </ul>
 
-        <h3>Nosso Compromisso</h3>
-        <ul>
-            <li>Equipe Sempre Presente: Trabalhamos lado a lado com seu negócio.</li>
-            <li>Experiência Fluida: Garantimos uma experiência adaptada e eficiente.</li>
-        </ul>
-    </section>
+            <h3>Nosso Compromisso</h3>
+            <ul>
+                <li>Equipe Sempre Presente: Trabalhamos lado a lado com seu negócio.</li>
+                <li>Experiência Fluida: Garantimos uma experiência adaptada e eficiente.</li>
+            </ul>
+        </section>
 
-    <section>
-        <h2>O que Procuramos</h2>
-        <p>Junte-se a nós para uma parceria que vai além do simples fornecimento de produtos!</p>
+        <section>
+            <h2>O que Procuramos</h2>
+            <p>Junte-se a nós para uma parceria que vai além do simples fornecimento de produtos!</p>
 
-        <h3>Nossos Objetivos</h3>
-        <ul>
-            <li>Parcerias, Não Apenas Clientes: Buscamos verdadeiros sócios que desejam uma solução completa, não apenas um
-                produto.</li>
-            <li>Suporte Contínuo: Estamos presentes desde o início, oferecendo suporte contínuo e desenvolvendo junto com
-                nossos clientes.</li>
-        </ul>
+            <h3>Nossos Objetivos</h3>
+            <ul>
+                <li>Parcerias, Não Apenas Clientes: Buscamos verdadeiros sócios que desejam uma solução completa, não apenas um produto.</li>
+                <li>Suporte Contínuo: Estamos presentes desde o início, oferecendo suporte contínuo e desenvolvendo junto com nossos clientes.</li>
+            </ul>
 
-        <h3>Nosso Compromisso</h3>
-        <ul>
-            <li>Desenvolvimento Conjunto: Questionamos decisões para evitar equívocos e garantir a eficácia do projeto.</li>
-            <li>Planejamento Certeiro: Minimizamos impedimentos e erros, tanto técnicos quanto estratégicos.</li>
-        </ul>
-    </section>
+            <h3>Nosso Compromisso</h3>
+            <ul>
+                <li>Desenvolvimento Conjunto: Questionamos decisões para evitar equívocos e garantir a eficácia do projeto.</li>
+                <li>Planejamento Certeiro: Minimizamos impedimentos e erros, tanto técnicos quanto estratégicos.</li>
+            </ul>
+        </section>
 
-    <section>
-        <h2>Portfólio de Serviços</h2>
-        <ul>
-            <li><strong>Gestão Financeira e Contábil:</strong> Administração eficiente e conformidade fiscal para 100 lojas de moda.</li>
-            <li><strong>Consultoria para Instituições de Investimento:</strong> Resolução de desafios financeiros e otimização de estratégias para renomada instituição de investimentos.</li>
-            <li><strong>Desenvolvimento de Soluções para a Saúde:</strong> Implementação de soluções inovadoras para melhorar o atendimento e a gestão de processos no setor de saúde.</li>
-            <li><strong>Soluções de Compliance:</strong> Criação e implementação de soluções de compliance para garantir conformidade e integridade para diversas empresas.</li>
-            <li><strong>Comunicação para Redes de Hostels:</strong> Estratégias de comunicação para melhorar a interação com clientes e fortalecer a presença da marca em redes de hostels.</li>
-        </ul>
-    </section>
+        <section>
+            <h2>Portfólio de Serviços</h2>
+            <ul>
+                <li><strong>Gestão Financeira e Contábil:</strong> Administração eficiente e conformidade fiscal para 100 lojas de moda.</li>
+                <li><strong>Consultoria para Instituições de Investimento:</strong> Resolução de desafios financeiros e otimização de estratégias para renomada instituição de investimentos.</li>
+                <li><strong>Desenvolvimento de Soluções para a Saúde:</strong> Implementação de soluções inovadoras para melhorar o atendimento e a gestão de processos no setor de saúde.</li>
+                <li><strong>Soluções de Compliance:</strong> Criação e implementação de soluções de compliance para garantir conformidade e integridade para diversas empresas.</li>
+                <li><strong>Comunicação para Redes de Hostels:</strong> Estratégias de comunicação para melhorar a interação com clientes e fortalecer a presença da marca em redes de hostels.</li>
+            </ul>
+        </section>
 
-    <footer class="footer">
+        <div style="text-align: center; margin: 20px;">
+            <a href="#contact" class="quote-button">Solicite um Orçamento</a>
+        </div>
+    </main>
+
+    <footer>
         <p>&copy; 2024 Ekatelos. Todos os direitos reservados.</p>
-        
         <p>CNPJ: 45.643.037/0001-76</p>
-        <a target="_blank" style="font-size: xx-small; color: whitesmoke;" href="https://icons8.com">Icons8</a>
-        
-    </footer>
-        
+        <a target="_blank" href="https://icons8.com">Icons8</a>
     </footer>
 
 </body>
