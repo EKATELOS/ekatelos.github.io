@@ -14,11 +14,11 @@
 	'https://connect.facebook.net/en_US/fbevents.js');
 	fbq('init', '401679832958679');
 	fbq('track', 'PageView');
-	</script>
-	<noscript><img height="1" width="1" style="display:none"
+</script>
+<noscript><img height="1" width="1" style="display:none"
 	src="https://www.facebook.com/tr?id=401679832958679&ev=PageView&noscript=1"
-	/></noscript>
-	<!-- End Meta Pixel Code -->
+/></noscript>
+<!-- End Meta Pixel Code -->
 <style>
 @import url('https://fonts.googleapis.com/css?family=Poiret+One|Source+Sans+Pro');
 
@@ -145,84 +145,131 @@ body {
 		transform: translateY(-2000px);
 	}
 }
+
+.about-us-link {
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0; /* Fundo cinza */
+    padding: 10px;             /* Espaçamento interno */
+    border-radius: 5px;        /* Bordas arredondadas */
+}
 </style>
 <main class="main">
 	<section class="contact">
-	  <h1 class="title">Ekatelos</h1>
-	  <h3 class="title-min">ἐκτέλος</h3>
-	  <h2 class="sub-title">Site Under Construction</h2>
-	  <div  class="quote-button" style="display: flex;">
-		<img style="height:50px" src="whatsapp-svgrepo-com.svg" alt="" srcset="">
-		<div><a href="https://api.whatsapp.com/send?phone=5511963371980&text=Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20orcamento" class="quote-button-text">Faça orçamento conosco</a>	</div>
+		<h1 class="title">Ekatelos</h1>
+		<h3 class="title-min">ἐκτέλος</h3>
+		<h2 class="sub-title">Site Under Construction</h2>
 		
-	</div>
-	  
+		<!-- Adicionando referência à página sobre nós com fundo cinza, antes do botão de orçamento -->
+		<div class="about-us-link" style="margin-top: 30px; display: flex; align-items: center; background-color: #f0f0f0; padding: 10px; border-radius: 5px;">
+		  <img src="info-icon.svg" alt="Ícone Informações" style="height: 30px; margin-right: 10px;">
+		  <a href="aboutus.html" class="about-us-button" style="text-decoration: none; color: #000; font-size: 18px; font-weight: bold;">Saiba mais sobre a nossa empresa</a>
+		</div>
+  
+		<!-- Botão de contato via WhatsApp -->
+		<div class="quote-button" style="display: flex; align-items: center; margin-top: 20px;">
+		  <img style="height:50px" src="whatsapp-svgrepo-com.svg" alt="WhatsApp Logo">
+		  <div style="margin-left: 10px;">
+			<a href="https://api.whatsapp.com/send?phone=5511963371980&text=Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20orcamento" class="quote-button-text" style="text-decoration: none; color: #000;">Faça orçamento conosco</a>
+		  </div>
+		</div>
+		
 	</section>
-  </main>
-  <footer class="footer">
-	<p>Ekatelos</p>
+</main>
+<footer class="footer">
+<p>&copy; 2024 Ekatelos. Todos os direitos reservados.</p>
 
-	<p>CNPJ: 45.643.037/0001-76</p>
+<p>CNPJ: 45.643.037/0001-76</p>
+<a target="_blank" href="https://icons8.com/icon/2800/info">Info</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 
-	<p>Contato: +55 11 96337-1980</p>
-  </footer>
+</footer>
   
-  <style>
-	body, html {
-	  height: 100%;
-	  margin: 0;
-	  display: flex;
-	  flex-direction: column;
-	}
-  
-	.main {
-	  flex: 1;
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;
-	  text-align: center;
-	}
-  
-	.quote-button {
-	  display: inline-block;
-	  padding: 10px 20px;
-	  
-	  background-color: #25d366; /* WhatsApp green */
-	  color: white;
+<style>
+body, html {
+	height: 100%;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+}
 
-	  font-size: x-large;
-	  text-align: center;
-	  text-decoration: none;
-	  border-radius: 5px;
-	}
+.main {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
 
-	.quote-button-text {
-	  font-weight: 1000;
-	  display: inline-block;
-	  padding: 10px 20px;
-	  color: white;
-	  font-size: x-large;
-	  text-align: center;
-	  text-decoration: none;
-	  border-radius: 5px;
-	}
+.quote-button {
+	display: inline-block;
+	padding: 10px 20px;
 	
-	.quote-button:hover {
-	  background-color: #128c7e; /* Darker WhatsApp green */
-	}
-  
-	.footer {
-	  background-color: #f1f1f1;
-	  padding: 20px;
-	  text-align: center;
-	  color: #090a0f;
-	  margin-top: auto;
-	  width: 100%;
-	  z-index: 999;
-	}
-  
-	.footer p {
-	  margin: 5px 0;
-	}
-  </style>
-  
+	background-color: #28a745; /* WhatsApp green */
+	color: white;
+
+	font-size: x-large;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 5px;
+}
+
+.quote-button-text {
+	font-weight: 1000;
+	display: inline-block;
+	padding: 10px 20px;
+	color: white;
+	font-size: x-large;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 5px;
+}
+
+.quote-button:hover {
+	background-color: #128c7e; /* Darker WhatsApp green */
+}
+
+.footer {
+	background-color: #f1f1f1;
+	padding: 20px;
+	text-align: center;
+	color: #090a0f;
+	margin-top: auto;
+	width: 100%;
+	z-index: 999;
+}
+
+.footer p {
+	margin: 5px 0;
+}
+
+.about-us-button {
+    background-color: #ececec;
+    color: #333;
+}
+.quote-button-text {
+
+    color: #fff;
+}
+
+.about-us-link:hover, .quote-button:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+.about-us-button, .quote-button-text {
+    font-size: 1.2rem; /* Slightly bigger for readability */
+    font-weight: bold;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a2e, #16213e); /* Smooth gradient */
+}
+
+section.contact {
+    margin-top: 20px;
+    padding: 40px;
+}
+</style>
