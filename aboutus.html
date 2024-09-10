@@ -32,14 +32,20 @@
             font-size: 2.5rem;
         }
 
-        section {
+        main {
+            flex: 1;
             padding: 20px;
             margin: 20px auto;
             max-width: 1200px;
+        }
+
+        section {
+            padding: 20px;
             background-color: #fff;
             color: #333;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            margin-bottom: 20px;
         }
 
         section h2 {
@@ -59,16 +65,30 @@
         }
 
         ul {
-            list-style-type: none;
+            list-style: none;
             padding: 0;
         }
 
         ul li {
-            background: #333;
-            color: #fff;
+            display: flex;
+            align-items: center;
             margin-bottom: 10px;
             padding: 10px;
             border-radius: 5px;
+            background: #f0f0f0;
+            color: #333;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        ul li::before {
+            content: '✔'; /* You can use different icons here */
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            color: #28a745; /* Icon color */
+            font-size: 1.2rem;
+            text-align: center;
         }
 
         .quote-button, .about-us-button {
@@ -191,10 +211,6 @@
                 <li><strong>Comunicação para Redes de Hostels:</strong> Estratégias de comunicação para melhorar a interação com clientes e fortalecer a presença da marca em redes de hostels.</li>
             </ul>
         </section>
-
-        <div style="text-align: center; margin: 20px;">
-            <a href="#contact" class="quote-button">Solicite um Orçamento</a>
-        </div>
     </main>
 
     <footer>
