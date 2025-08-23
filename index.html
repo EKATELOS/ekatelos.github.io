@@ -10,6 +10,8 @@
     <link rel="apple-touch-icon" href="./assets/logo-ekatelos.png" />
     <meta name="description" content="Consultoria, desenvolvimento e produtos SaaS sob medida. Do planejamento à operação, entregamos tecnologia com transparência e foco em resultado." />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Material Design Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" rel="stylesheet" />
  
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-76GXFJ2G1G"></script>
@@ -109,7 +111,7 @@
     .product-tagline { font-size:.8rem; font-weight:600; color:#4d6a20; text-transform:uppercase; letter-spacing:.08em; margin-top:.10rem; }
     .feature-list { margin-top:1rem; display:grid; gap:.45rem; font-size:.78rem; line-height:1.25rem; }
     .feature-item { position:relative; padding-left:1.35rem; color:#365011; font-weight:500; }
-    .feature-item svg { position:absolute; left:0; top:2px; width:0.95rem; height:0.95rem; color:#76CC00; }
+    .feature-item .mdi { position:absolute; left:0; top:2px; font-size:0.95rem; line-height:1; color:#76CC00; }
     .product-actions { margin-top:1.35rem; }
     .product-btn { display:inline-flex; align-items:center; gap:.5rem; background:#264000; color:#B8FF4D; font-weight:600; font-size:.75rem; letter-spacing:.05em; padding:.75rem 1.15rem; border-radius:999px; border:1px solid #365d00; box-shadow:0 4px 14px -4px rgba(0,0,0,0.25), 0 0 0 1px rgba(150,255,0,0.3); transition:.35s; text-transform:uppercase; }
     .product-btn:hover { background:#2f5200; color:#fff; box-shadow:0 6px 18px -6px rgba(0,0,0,0.35), 0 0 0 2px rgba(150,255,0,0.35); }
@@ -137,9 +139,7 @@
                 </nav>
                 <a href="#contact" class="hidden md:inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-semibold text-black shadow-glow transition hover:opacity-90">Fale conosco</a>
                 <button id="menuBtn" aria-label="Abrir menu" class="inline-flex items-center justify-center rounded-md border border-white/30 px-3 py-2 md:hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-5 w-5">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                    </svg>
+                    <i class="mdi mdi-menu text-xl"></i>
                 </button>
             </div>
             <div id="mobileMenu" class="hidden pb-4 md:hidden">
@@ -159,22 +159,29 @@
     <section id="hero" class="relative flex min-h-screen items-center bg-gradient-to-br from-[#070417] to-[#002b0b] pt-10 md:pt-28 text-white">
             <div class="mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-10 px-4 md:grid-cols-2">
                 <!-- Left: Title -->
-                <div class="space-y-6">
-                    <h1 class="text-left text-5xl font-extrabold tracking-tight md:text-6xl">EKATELOS</h1>
-                    <div>
-                        <p class="max-w-md text-left text-white/90">Do início ao fim.</p>
-                        <p>Transformamos ideias em tecnologia que impulsiona negócios.</p>
-
+                <div class="space-y-6 text-center md:text-left">
+                    <!-- Logo apenas no mobile -->
+                    <img src="./assets/logo-ekatelos.png" alt="Logo EKATELOS" class="mx-auto h-16 w-auto md:hidden" loading="lazy" decoding="async" />
+                    <h1 class="text-5xl font-extrabold tracking-tight md:text-6xl">EKATELOS</h1>
+                    <div class="mx-auto md:mx-0">
+                        <p class="max-w-md mx-auto md:mx-0 text-white/90">Do início ao fim.</p>
+                        <p class="max-w-lg mx-auto md:mx-0">Transformamos ideias em tecnologia que impulsiona negócios.</p>
                     </div>
-                    <div class="flex flex-wrap gap-3">
-                        <a href="#contact" class="inline-flex items-center justify-center rounded-md bg-accent px-6 py-3 font-semibold text-dark shadow-glow transition hover:brightness-95">Fale com um especialista</a>
-                        <a href="#products" class="inline-flex items-center justify-center rounded-md border border-white/30 px-6 py-3 font-semibold text-white transition hover:bg-white/10">Conheça nossos produtos</a>
+                    <!-- Botões desktop (mantidos na coluna esquerda) -->
+                    <div class="hidden md:flex flex-row gap-3">
+                        <a href="#contact" class="inline-flex items-center justify-center rounded-md bg-accent px-6 py-3 font-semibold text-dark shadow-glow transition hover:brightness-95 text-center">Fale conosco</a>
+                        <a href="#about" class="inline-flex items-center justify-center rounded-md border border-white/30 px-6 py-3 font-semibold text-white transition hover:bg-white/10 text-center">Sobre nós</a>
                     </div>
                 </div>
                 <!-- Right: Particle Globe -->
                 <div class="relative isolate mx-auto aspect-square w-[95%] max-w-lg md:w-full">
                     <div class="absolute inset-0 -z-10 rounded-full opacity-25 blur-3xl" style="background: radial-gradient(60% 60% at 50% 50%, rgba(150,255,0,0.40) 0%, rgba(150,255,0,0.0) 70%);"></div>
                     <canvas id="particleGlobe" class="absolute inset-0 h-full w-full"></canvas>
+                </div>
+                <!-- Botões mobile (abaixo do Globe) -->
+                <div class="flex flex-col items-center w-full gap-3 md:hidden -mt-4">
+                    <a href="#contact" class="inline-flex w-[90%] items-center justify-center rounded-md bg-accent px-6 py-3 font-semibold text-dark shadow-glow transition hover:brightness-95 text-center">Fale conosco</a>
+                    <a href="#about" class="inline-flex w-[90%] items-center justify-center rounded-md border border-white/30 px-6 py-3 font-semibold text-white transition hover:bg-white/10 text-center">Sobre nós</a>
                 </div>
             </div>
         </section>
@@ -188,37 +195,27 @@
             </div>
             <div class="value-grid mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
                 <div class="card-surface p-5 text-center">
-                    <div class="icon-badge">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-6 w-6"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
-                    </div>
+                    <div class="icon-badge"><i class="mdi mdi-shield-check-outline text-2xl"></i></div>
                     <h3 class="text-sm font-bold uppercase tracking-wide">Excelência</h3>
                     <p class="mt-2 text-xs text-slate-700">Padrões altos de qualidade do diagnóstico à entrega.</p>
                 </div>
                 <div class="card-surface p-5 text-center">
-                    <div class="icon-badge">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
-                    </div>
+                    <div class="icon-badge"><i class="mdi mdi-eye-outline text-2xl"></i></div>
                     <h3 class="text-sm font-bold uppercase tracking-wide">Transparência</h3>
                     <p class="mt-2 text-xs text-slate-700">Comunicação clara, prazos realistas e governança.</p>
                 </div>
                 <div class="card-surface p-5 text-center">
-                    <div class="icon-badge">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6"><path stroke-linecap="round" stroke-linejoin="round" d="M11.5 3.5 8 9l4 2-3.5 5.5M17 3l-2.5 6 4 2-6.5 9"/></svg>
-                    </div>
+                    <div class="icon-badge"><i class="mdi mdi-lightbulb-on-outline text-2xl"></i></div>
                     <h3 class="text-sm font-bold uppercase tracking-wide">Inovação</h3>
                     <p class="mt-2 text-xs text-slate-700">Tecnologia de ponta aplicada ao que importa.</p>
                 </div>
                 <div class="card-surface p-5 text-center">
-                    <div class="icon-badge">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg>
-                    </div>
+                    <div class="icon-badge"><i class="mdi mdi-account-group-outline text-2xl"></i></div>
                     <h3 class="text-sm font-bold uppercase tracking-wide">Colaboração</h3>
                     <p class="mt-2 text-xs text-slate-700">Trabalhamos lado a lado com o seu time.</p>
                 </div>
                 <div class="card-surface p-5 text-center">
-                    <div class="icon-badge">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5h15m-15 3h15M6 7V6a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v1m0 6v5.25A2.25 2.25 0 0 1 15.75 21h-7.5A2.25 2.25 0 0 1 6 18.75V13.5"/></svg>
-                    </div>
+                    <div class="icon-badge"><i class="mdi mdi-autorenew text-2xl"></i></div>
                     <h3 class="text-sm font-bold uppercase tracking-wide">Adaptação</h3>
                     <p class="mt-2 text-xs text-slate-700">Soluções sob medida para cada contexto.</p>
                 </div>
@@ -234,21 +231,8 @@
                     <p class="mt-3 text-slate-600">Conhecimento profundo em diversas frentes para compor soluções completas.</p>
                 </div>
 
-                <!-- Mobile fallback -->
-                <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:hidden">
-                    <span class="rounded-md bg-light px-4 py-3 text-center text-sm font-medium">Arquitetura de Software</span>
-                    <span class="rounded-md bg-light px-4 py-3 text-center text-sm font-medium">Infraestrutura</span>
-                    <span class="rounded-md bg-light px-4 py-3 text-center text-sm font-medium">Cloud</span>
-                    <span class="rounded-md bg-light px-4 py-3 text-center text-sm font-medium">Ciência de Dados</span>
-                    <span class="rounded-md bg-light px-4 py-3 text-center text-sm font-medium">A.I. / Machine Learning</span>
-                    <span class="rounded-md bg-light px-4 py-3 text-center text-sm font-medium">Engenharia Reversa</span>
-                    <span class="rounded-md bg-light px-4 py-3 text-center text-sm font-medium">Blockchain</span>
-                    <span class="rounded-md bg-light px-4 py-3 text-center text-sm font-medium">UI/UX</span>
-                    <span class="rounded-md bg-light px-4 py-3 text-center text-sm font-medium">Segurança</span>
-                </div>
-
-                <!-- Circle layout (md+) generated via JS for alinhamento perfeito -->
-                <div id="specialtyContainer" class="relative mx-auto mt-20 hidden aspect-square w-full max-w-[560px] md:flex">
+                <!-- Circle layout agora também no mobile -->
+                <div id="specialtyContainer" class="relative mx-auto mt-14 flex aspect-square w-full max-w-[340px] sm:max-w-[440px] md:mt-20 md:max-w-[560px]">
                     <div class="specialty-ring absolute inset-9 rounded-full border-2 border-primary"></div>
                     <!-- Labels e bolinhas serão posicionados via JS -->
                 </div>
@@ -323,7 +307,7 @@
                 <article class="product-card" aria-labelledby="prod-chauvet-name">
                     <div class="product-head">
                         <div class="product-icon">
-                            1
+                            01
                         </div>
                         <div>
                             <h3 id="prod-chauvet-name" class="product-name">Chauvet</h3>
@@ -332,18 +316,9 @@
                     </div>
                     <p class="mt-3 text-sm leading-relaxed text-slate-700">Centralize canais, reduza tempo de resposta e crie fluxos automatizados.</p>
                     <div class="feature-list" aria-label="Principais recursos">
-                        <div class="feature-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                            Fluxo da Chatbots com integrações
-                        </div>
-                        <div class="feature-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                            CRM e marketing
-                        </div>
-                        <div class="feature-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                            SAC híbrido (humano + IA)
-                        </div>
+                        <div class="feature-item"><i class="mdi mdi-check-bold"></i>Fluxo da Chatbots com integrações</div>
+                        <div class="feature-item"><i class="mdi mdi-check-bold"></i>CRM e marketing</div>
+                        <div class="feature-item"><i class="mdi mdi-check-bold"></i>SAC híbrido (humano + IA)</div>
                     </div>
                     <div class="product-meta">
                         <span class="tag">Chatbot</span>
@@ -356,7 +331,7 @@
                 <!-- Akrivos -->
                 <article class="product-card" aria-labelledby="prod-akrivos-name">
                     <div class="product-head">
-                        <div class="product-icon">2</div>
+                        <div class="product-icon">02</div>
                         <div>
                             <h3 id="prod-akrivos-name" class="product-name">Akrivos</h3>
                         </div>
@@ -364,18 +339,9 @@
                     </div>
                     <p class="mt-3 text-sm leading-relaxed text-slate-700">Plataforma de agendamentos, assinatura e gestão de serviços.</p>
                     <div class="feature-list" aria-label="Principais recursos">
-                        <div class="feature-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                            Agendamento de serviços
-                        </div>
-                        <div class="feature-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                            Assinaturas recorrentes
-                        </div>
-                        <div class="feature-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                            Relatórios gerenciais
-                        </div>
+                        <div class="feature-item"><i class="mdi mdi-check-bold"></i>Agendamento de serviços</div>
+                        <div class="feature-item"><i class="mdi mdi-check-bold"></i>Assinaturas recorrentes</div>
+                        <div class="feature-item"><i class="mdi mdi-check-bold"></i>Relatórios gerenciais</div>
                     </div>
                     <div class="product-meta">
                     </div>
@@ -384,7 +350,7 @@
                 <!-- Manteio -->
                 <article class="product-card" aria-labelledby="prod-manteio-name">
                     <div class="product-head">
-                        <div class="product-icon">3</div>
+                        <div class="product-icon">03</div>
                         <div>
                             <h3 id="prod-manteio-name" class="product-name">Manteio</h3>
                         </div>
@@ -392,18 +358,9 @@
                     </div>
                     <p class="mt-3 text-sm leading-relaxed text-slate-700">IA personalizada para empresas.</p>
                     <div class="feature-list" aria-label="Principais recursos">
-                        <div class="feature-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                            Base de conhecimento do cliente
-                        </div>
-                        <div class="feature-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                            Consulta de informação realtime
-                        </div>
-                        <div class="feature-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                            Automação de processos
-                        </div>
+                        <div class="feature-item"><i class="mdi mdi-check-bold"></i>Base de conhecimento do cliente</div>
+                        <div class="feature-item"><i class="mdi mdi-check-bold"></i>Consulta de informação realtime</div>
+                        <div class="feature-item"><i class="mdi mdi-check-bold"></i>Automação de processos</div>
                     </div>
                     <div class="product-meta">
                         <span class="tag">Agents</span>
@@ -427,12 +384,7 @@
             <div class="portfolio-grid mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             <!-- Varejo -->
             <div class="card-surface p-6">
-                <div class="icon-badge" aria-hidden="true">
-                <!-- Sacola / carrinho estilizado -->
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="h-6 w-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M7 10V7a5 5 0 0 1 10 0v3m3 0 .7 8.39a2 2 0 0 1-2 2.11H5.3a2 2 0 0 1-2-2.11L4 10h16ZM9 10h6"/>
-                </svg>
-                </div>
+                <div class="icon-badge" aria-hidden="true"><i class="mdi mdi-store-outline text-2xl"></i></div>
                 <h3 class="text-base font-bold">Varejo</h3>
                 <div class="text-sm font-semibold text-secondary">Varejista de moda</div>
                 <p class="mt-2 text-xs text-slate-700">Sistema de ERP completo da empresa: ecommerce, gestão, financeiro, expedição de pedidos, automação de marketing.</p>
@@ -440,13 +392,7 @@
             
             <!-- Saúde -->
             <div class="card-surface p-6">
-                <div class="icon-badge" aria-hidden="true">
-                <!-- Prontuário / cruz médica -->
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="h-6 w-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M7 3h7.5L20 8.5V19a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"/>
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 3v5h5M10 14h4m-2-2v4"/>
-                </svg>
-                </div>
+                <div class="icon-badge" aria-hidden="true"><i class="mdi mdi-hospital-box-outline text-2xl"></i></div>
                 <h3 class="text-base font-bold">Saúde</h3>
                 <div class="text-sm font-semibold text-secondary">Clínica e plano de saúde</div>
                 <p class="mt-2 text-xs text-slate-700">Plataforma de atendimento, prontuário médico, agendamento, planos de assinatura, gestão financeira, telemedicina e mais.</p>
@@ -454,13 +400,7 @@
             
             <!-- Náutico -->
             <div class="card-surface p-6">
-                <div class="icon-badge" aria-hidden="true">
-                <!-- Âncora / barco tech -->
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="h-6 w-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 2v14m0 0a5 5 0 0 0 5-5m-5 5a5 5 0 0 1-5-5M5 11H2a10 10 0 0 0 20 0h-3"/>
-                    <circle cx="12" cy="6" r="2"/>
-                </svg>
-                </div>
+                <div class="icon-badge" aria-hidden="true"><i class="mdi mdi-ferry text-2xl"></i></div>
                 <h3 class="text-base font-bold">Náutico</h3>
                 <div class="text-sm font-semibold text-secondary">Serviços elétricos para embarcações</div>
                 <p class="mt-2 text-xs text-slate-700">Hardware para controle de aparelhos a bordo e portal para customização do aplicativo embarcado.</p>
@@ -468,28 +408,14 @@
 
             <!-- Logística -->
             <div class="card-surface p-6">
-                <div class="icon-badge" aria-hidden="true">
-                <!-- Caminhão / rota -->
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="h-6 w-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 7h11v9H3zM14 11h3.8a2 2 0 0 1 1.8 1.1L21 14v2h-7v-5Z"/>
-                    <circle cx="7.5" cy="18" r="1.75"/>
-                    <circle cx="16.5" cy="18" r="1.75"/>
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 3h5m7 0h2M8 3v2m7-2v2"/>
-                </svg>
-                </div>
+                <div class="icon-badge" aria-hidden="true"><i class="mdi mdi-truck-outline text-2xl"></i></div>
                 <h3 class="text-base font-bold">Logística</h3>
                 <div class="text-sm font-semibold text-secondary">Software para transportadoras</div>
                 <p class="mt-2 text-xs text-slate-700">Sistema para gestão de entregas, otimização de rotas e gestão de frotas.</p>
             </div>
             <!-- Jurídico -->
             <div class="card-surface p-6">
-                <div class="icon-badge" aria-hidden="true">
-                <!-- Balança -->
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="h-6 w-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"/>
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 10h14M9 12h6M9 15h4"/>
-                </svg>
-                </div>
+                <div class="icon-badge" aria-hidden="true"><i class="mdi mdi-scale-balance text-2xl"></i></div>
                 <h3 class="text-base font-bold">Jurídico</h3>
                 <div class="text-sm font-semibold text-secondary">Escritório</div>
                 <p class="mt-2 text-xs text-slate-700">Plataforma de gerenciamento de processos, consulta de orgãos públicos, scraping de dados, automações e integrações.</p>
@@ -497,14 +423,7 @@
 
             <!-- Hotelaria -->
             <div class="card-surface p-6">
-                <div class="icon-badge" aria-hidden="true">
-                <!-- Cama + sino -->
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="h-6 w-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 21V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v16M2 21h20"/>
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 9h2m4 0h2M8 13h2m4 0h2M8 17h2m4 0h2"/>
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 21v-3a1 1 0 0 1 1-1h2.5a1 1 0 0 1 1 1v3"/>
-                </svg>
-                </div>
+                <div class="icon-badge" aria-hidden="true"><i class="mdi mdi-bed-outline text-2xl"></i></div>
                 <h3 class="text-base font-bold">Hotelaria</h3>
                 <div class="text-sm font-semibold text-secondary">Rede de hostels</div>
                 <p class="mt-2 text-xs text-slate-700">Chatbot para check‑in/out, automações internas e comunicação com hóspedes.</p>
@@ -518,11 +437,11 @@
     <section id="contact" class="scroll-mt-24 py-16 md:py-20">
         <div class="mx-auto max-w-6xl px-4">
             <div class="mx-auto max-w-2xl text-center">
-                <h2 class="text-3xl font-bold text-black md:text-4xl">Fale conosco</h2>
+                <h2  class="section-title">Fale conosco</h2>
                 <p class="mt-3 text-slate-600">Atendimento rápido direto pelo WhatsApp. Clique abaixo e conte sobre seu desafio.</p>
             </div>
             <div class="mx-auto mt-10 max-w-md rounded-lg bg-white p-8 shadow flex flex-col items-center gap-6">
-                <a href="https://api.whatsapp.com/send?phone=5511963371980&text=Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20orcamento" target="_blank" rel="noopener" class="primary-btn text-base px-8 py-4">Abrir WhatsApp</a>
+                <a href="https://api.whatsapp.com/send?phone=5511963371980&text=Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20orcamento" target="_blank" rel="noopener" class="primary-btn text-base px-8 py-4"><i class="mdi mdi-whatsapp text-xl"></i> Abrir WhatsApp</a>
                 <p class="text-xs text-slate-500">Horário comercial • Resposta rápida</p>
             </div>
         </div>
@@ -606,8 +525,9 @@
                 const radius = (Math.min(w, h) / 2) - inset; // raio da borda verde
                 const centerX = w / 2;
                 const centerY = h / 2;
-                const dotRadius = 10; // bolinha 20px (aumentado)
-                const gapFromRing = 40; // mais afastado do anel
+                const isSmall = w < 420;
+                const dotRadius = isSmall ? 7 : 10; // bolinha menor em telas pequenas
+                const gapFromRing = isSmall ? 26 : 40; // aproxima em telas pequenas
                 const wrappers = container.querySelectorAll('[data-index]');
                 wrappers.forEach(wrapper => {
                     const idx = parseInt(wrapper.dataset.index, 10);
@@ -629,6 +549,12 @@
                     // Label: deslocar radialmente para fora
                     const labelOffset = gapFromRing + dotRadius; // começa logo após a bolinha
                     // Medir label para centralizar ao longo da tangente
+                    // Ajustar fonte em telas pequenas
+                    if (isSmall) {
+                        label.style.fontSize = '0.60rem';
+                    } else {
+                        label.style.fontSize = '0.75rem';
+                    }
                     const lw = label.offsetWidth || 0;
                     const lh = label.offsetHeight || 0;
                     // Vetor radial
