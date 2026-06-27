@@ -3,16 +3,60 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EKATELOS</title>
+    <title>EKATELOS — Consultoria, desenvolvimento e produtos SaaS sob medida</title>
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/logo-ekatelos.png" />
     <link rel="shortcut icon" href="./assets/logo-ekatelos.png" />
     <link rel="apple-touch-icon" href="./assets/logo-ekatelos.png" />
-    <meta name="description" content="Consultoria, desenvolvimento e produtos SaaS sob medida. Do planejamento à operação, entregamos tecnologia com transparência e foco em resultado." />
+    <meta name="description" content="Consultoria, desenvolvimento e produtos SaaS sob medida. Do planejamento à operação" />
+    <link rel="canonical" href="https://ekatelos.com/" />
+    <meta name="theme-color" content="#05070a" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="EKATELOS" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:url" content="https://ekatelos.com/" />
+    <meta property="og:title" content="EKATELOS — Tecnologia que impulsiona negócios" />
+    <meta property="og:description" content="Consultoria, desenvolvimento e produtos SaaS sob medida. Do planejamento à operação, com transparência e foco em resultado." />
+    <meta property="og:image" content="https://ekatelos.com/assets/logo-ekatelos.png" />
+    <meta property="og:image:alt" content="EKATELOS" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="EKATELOS — Tecnologia que impulsiona negócios" />
+    <meta name="twitter:description" content="Consultoria, desenvolvimento e produtos SaaS sob medida, com transparência e foco em resultado." />
+    <meta name="twitter:image" content="https://ekatelos.com/assets/logo-ekatelos.png" />
+
+    <!-- Dados estruturados -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "EKATELOS",
+        "legalName": "Ekatelos LTDA",
+        "url": "https://ekatelos.com/",
+        "logo": "https://ekatelos.com/assets/logo-ekatelos.png",
+        "description": "Consultoria, desenvolvimento e produtos SaaS sob medida. Do planejamento à operação, entregamos tecnologia com transparência e foco em resultado.",
+        "taxID": "45.643.037/0001-76",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+55-11-96337-1980",
+            "contactType": "sales",
+            "areaServed": "BR",
+            "availableLanguage": ["Portuguese"]
+        }
+    }
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Material Design Icons -->
     <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" rel="stylesheet" />
- 
+
+    <!-- Fontes modernas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Space+Grotesk:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-76GXFJ2G1G"></script>
     <script>
@@ -51,418 +95,544 @@
                         accent: '#B8FF4D',
                         light: '#F2FFE6',
                         dark: '#264000',
-                        surface: '#f5f9ef',
-                        surfaceAlt: '#e7f3dc'
+                        ink: '#05070a'
+                    },
+                    fontFamily: {
+                        display: ['Sora', 'system-ui', 'sans-serif'],
+                        sans: ['Inter', 'system-ui', 'sans-serif']
                     },
                     boxShadow: {
-                        glow: '0 10px 30px rgba(150,255,0,0.35)'
+                        glow: '0 10px 40px rgba(150,255,0,0.35)'
                     }
                 }
             }
         }
     </script>
     <style>
-        .card-surface { position:relative; overflow:hidden; border-radius:0.75rem; background:var(--tw-surface,#f5f9ef); box-shadow:0 2px 4px rgba(0,0,0,0.06); transition:.3s; }
-        .card-surface:hover { transform:translateY(-4px); box-shadow:0 6px 18px -4px rgba(0,0,0,0.15); }
-        .card-surface::before { content:""; position:absolute; inset:0; opacity:0; transition:.4s; background:radial-gradient(circle at 30% 20%, rgba(150,255,0,0.20), transparent 70%); }
-        .card-surface:hover::before { opacity:1; }
-        .icon-badge { margin-bottom:1rem; display:inline-flex; height:3rem; width:3rem; align-items:center; justify-content:center; border-radius:0.75rem; background:linear-gradient(135deg,#76CC00,#96FF00); font-weight:600; color:#111; box-shadow:0 10px 30px rgba(150,255,0,0.35); }
-        .section-title { position:relative; display:inline-block; font-weight:800; letter-spacing:-0.02em; font-size:1.875rem; line-height:1.2; color:#111; }
-        @media (min-width:768px){ .section-title{ font-size:2.25rem; } }
-        .section-title::after { content:""; position:absolute; left:50%; bottom:-0.5rem; height:3px; width:4rem; transform:translateX(-50%); border-radius:999px; background:linear-gradient(90deg,#76CC00,#96FF00); }
-        .primary-btn { display:inline-flex; align-items:center; justify-content:center; gap:.5rem; border-radius:999px; background:linear-gradient(90deg,#76CC00,#96FF00); padding:.85rem 1.5rem; font-weight:600; color:#111; box-shadow:0 10px 30px rgba(150,255,0,0.35); transition:.3s; }
-        .primary-btn:hover { filter:brightness(1.05); }
-        .product-btn { margin-top:1.25rem; width:100%; justify-content:center; }
-        .value-grid h3, .service-grid h3, .portfolio-grid h3 { color:#264000; font-weight:600; }
-    /* Serviços aprimorados */
-    #services { position:relative; }
-    #services .services-deco { pointer-events:none; position:absolute; inset:0; overflow:hidden; }
-    #services .services-deco::before { content:""; position:absolute; width:520px; height:520px; top:-140px; right:-160px; background:radial-gradient(circle at 70% 30%, rgba(150,255,0,0.50), rgba(150,255,0,0)); filter:blur(80px); opacity:.35; }
-    #services .services-deco::after { content:""; position:absolute; width:420px; height:420px; bottom:-160px; left:-120px; background:radial-gradient(circle at 30% 70%, rgba(118,204,0,0.55), rgba(118,204,0,0)); filter:blur(70px); opacity:.35; }
-    .services-grid { display:grid; gap:1.25rem; margin-top:3.25rem; }
-    @media (min-width:640px){ .services-grid { grid-template-columns:repeat(2,1fr); } }
-    @media (min-width:1024px){ .services-grid { grid-template-columns:repeat(3,1fr); } }
-    .service-card { position:relative; background:linear-gradient(140deg,#ffffff,#f4ffe9 65%); border:1px solid #e1f2d2; border-radius:1rem; padding:1.35rem 1.35rem 1.6rem; display:flex; flex-direction:column; min-height:100%; box-shadow:0 4px 14px -6px rgba(0,0,0,0.10), 0 2px 4px -2px rgba(0,0,0,0.06); transition:.4s; overflow:hidden; }
-    .service-card::after { content:""; position:absolute; inset:0; background:radial-gradient(circle at 18% 15%, rgba(150,255,0,0.18), transparent 70%); opacity:0; transition:.5s; }
-    .service-card:hover { transform:translateY(-6px); box-shadow:0 14px 28px -14px rgba(0,0,0,0.28), 0 6px 12px -4px rgba(0,0,0,0.10); }
-    .service-card:hover::after { opacity:1; }
-    .service-icon { position:relative; z-index:1; width:2.9rem; height:2.9rem; border-radius:.85rem; display:flex; align-items:center; justify-content:center; background:linear-gradient(135deg,#76CC00,#96FF00); color:#102200; font-weight:700; font-size:.9rem; box-shadow:0 10px 30px rgba(150,255,0,0.35); }
-    .service-title { position:relative; z-index:1; margin-top:1rem; font-size:1rem; font-weight:800; letter-spacing:-0.01em; color:#1d2f00; }
-    .service-text { position:relative; z-index:1; margin-top:.55rem; font-size:.8rem; line-height:1.25rem; color:#39520e; font-weight:500; }
-    .service-meta { position:relative; z-index:1; margin-top:.85rem; display:flex; flex-wrap:wrap; gap:.4rem; }
-    .badge { background:#e8f7d6; color:#284300; font-size:.55rem; font-weight:700; letter-spacing:.06em; padding:.35rem .5rem; border-radius:.5rem; border:1px solid #d6edc0; text-transform:uppercase; }
-    @media (prefers-reduced-motion:reduce){ .service-card, .service-card::after { transition:none; } }
-    /* Produtos aprimorados */
-    #products { position:relative; }
-    #products .section-bg-deco { pointer-events:none; position:absolute; inset:0; overflow:hidden; }
-    #products .section-bg-deco::before, #products .section-bg-deco::after { content:""; position:absolute; border-radius:999px; filter:blur(70px); opacity:.45; }
-    #products .section-bg-deco::before { width:480px; height:480px; top:-120px; left:-80px; background:radial-gradient(circle at 30% 30%, rgba(150,255,0,0.55), rgba(150,255,0,0)); }
-    #products .section-bg-deco::after { width:520px; height:520px; bottom:-160px; right:-120px; background:radial-gradient(circle at 70% 70%, rgba(118,204,0,0.55), rgba(118,204,0,0)); }
-    .product-grid { --gap:1.25rem; display:grid; gap:var(--gap); }
-    @media (min-width:768px){ .product-grid { grid-template-columns:repeat(3,1fr); } }
-    .product-card { position:relative; display:flex; flex-direction:column; padding:1.5rem; background:linear-gradient(145deg,#ffffff,#f2ffe9); border:1px solid #e4f3d3; border-radius:1rem; box-shadow:0 4px 14px -4px rgba(0,0,0,0.08), 0 2px 4px -2px rgba(0,0,0,0.06); transition:.45s; }
-    .product-card::after { content:""; position:absolute; inset:0; border-radius:inherit; background:radial-gradient(circle at 20% 15%, rgba(150,255,0,0.15), transparent 70%); opacity:0; transition:.5s; }
-    .product-card:hover { transform:translateY(-6px); box-shadow:0 14px 28px -10px rgba(0,0,0,0.2), 0 4px 10px -2px rgba(0,0,0,0.08); }
-    .product-card:hover::after { opacity:1; }
-    .product-icon { font-weight: bold; width:3.25rem; height:3.25rem; border-radius:0.9rem; display:flex; align-items:center; justify-content:center; background:linear-gradient(135deg,#76CC00,#96FF00); color:#0d2200; box-shadow:0 10px 30px rgba(150,255,0,0.35); margin-bottom:1rem; }
-    .product-head { display:flex; align-items:flex-start; gap:.85rem; }
-    .product-badge { margin-left:auto; background:#264000; color:#B8FF4D; font-size:.65rem; letter-spacing:.05em; font-weight:700; padding:.40rem .55rem; border-radius:0.5rem; text-transform:uppercase; box-shadow:0 0 0 1px #96FF00 inset; }
-    .product-name { font-size:1.15rem; font-weight:800; letter-spacing:-0.02em; color:#1d2e00; }
-    .product-tagline { font-size:.8rem; font-weight:600; color:#4d6a20; text-transform:uppercase; letter-spacing:.08em; margin-top:.10rem; }
-    .feature-list { margin-top:1rem; display:grid; gap:.45rem; font-size:.78rem; line-height:1.25rem; }
-    .feature-item { position:relative; padding-left:1.35rem; color:#365011; font-weight:500; }
-    .feature-item .mdi { position:absolute; left:0; top:2px; font-size:0.95rem; line-height:1; color:#76CC00; }
-    .product-actions { margin-top:1.35rem; }
-    .product-btn { display:inline-flex; align-items:center; gap:.5rem; background:#264000; color:#B8FF4D; font-weight:600; font-size:.75rem; letter-spacing:.05em; padding:.75rem 1.15rem; border-radius:999px; border:1px solid #365d00; box-shadow:0 4px 14px -4px rgba(0,0,0,0.25), 0 0 0 1px rgba(150,255,0,0.3); transition:.35s; text-transform:uppercase; }
-    .product-btn:hover { background:#2f5200; color:#fff; box-shadow:0 6px 18px -6px rgba(0,0,0,0.35), 0 0 0 2px rgba(150,255,0,0.35); }
-    .product-meta { margin-top:.85rem; display:flex; flex-wrap:wrap; gap:.4rem; }
-    .tag { background:#e8f7d6; color:#2a4600; font-size:.6rem; font-weight:600; padding:.35rem .55rem; border-radius:.45rem; border:1px solid #d4ecbe; letter-spacing:.05em; }
-    /* Acessibilidade & redução de movimento */
-    @media (prefers-reduced-motion:reduce){ .product-card, .product-card::after { transition:none; } }
+        :root{
+            --ink:#05070a;
+            --primary:#96FF00;
+            --secondary:#76CC00;
+            --accent:#B8FF4D;
+        }
+        html, body { background:var(--ink); }
+        body { font-family:'Inter', system-ui, sans-serif; color:rgba(255,255,255,0.86); overflow-x:hidden; }
+        h1,h2,h3,.font-display { font-family:'Sora', system-ui, sans-serif; }
+
+        /* ===== Fundo aurora global fixo (movimento lento) ===== */
+        .bg-aurora { position:fixed; inset:0; z-index:-2; overflow:hidden; background:
+            radial-gradient(60% 50% at 50% 0%, rgba(150,255,0,0.10), transparent 60%),
+            #05070a; }
+        .bg-aurora::before, .bg-aurora::after{ content:""; position:absolute; border-radius:50%; filter:blur(110px); opacity:.45; }
+        .bg-aurora::before{ width:55vw; height:55vw; top:-15vw; left:-10vw; background:radial-gradient(circle, rgba(150,255,0,0.30), transparent 70%); animation:drift1 26s ease-in-out infinite; }
+        .bg-aurora::after{ width:50vw; height:50vw; bottom:-15vw; right:-10vw; background:radial-gradient(circle, rgba(118,204,0,0.28), transparent 70%); animation:drift2 32s ease-in-out infinite; }
+        .bg-grid{ position:fixed; inset:0; z-index:-1; pointer-events:none; opacity:.5;
+            background-image:linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+            background-size:64px 64px;
+            mask-image:radial-gradient(circle at 50% 30%, black, transparent 80%);
+            -webkit-mask-image:radial-gradient(circle at 50% 30%, black, transparent 80%);
+        }
+        @keyframes drift1{ 0%,100%{transform:translate(0,0) scale(1);} 50%{transform:translate(8vw,6vh) scale(1.15);} }
+        @keyframes drift2{ 0%,100%{transform:translate(0,0) scale(1);} 50%{transform:translate(-7vw,-5vh) scale(1.1);} }
+
+        /* ===== Liquid glass (estilo Apple) ===== */
+        .glass{ position:relative; border-radius:1.25rem; isolation:isolate;
+            background:linear-gradient(135deg, rgba(255,255,255,0.10), rgba(255,255,255,0.03));
+            backdrop-filter:blur(22px) saturate(180%); -webkit-backdrop-filter:blur(22px) saturate(180%);
+            border:1px solid rgba(255,255,255,0.12);
+            box-shadow:0 20px 50px -20px rgba(0,0,0,0.7), inset 0 1px 0 rgba(255,255,255,0.18), inset 0 0 30px rgba(255,255,255,0.02);
+        }
+        /* brilho especular superior */
+        .glass::before{ content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none; z-index:-1;
+            background:linear-gradient(180deg, rgba(255,255,255,0.16), transparent 38%); opacity:.7; }
+        .glass-hover{ transition:transform .5s cubic-bezier(.2,.7,.2,1), box-shadow .5s, border-color .5s; }
+        .glass-hover:hover{ transform:translateY(-6px); border-color:rgba(150,255,0,0.45);
+            box-shadow:0 30px 60px -24px rgba(0,0,0,0.8), 0 0 0 1px rgba(150,255,0,0.25), inset 0 1px 0 rgba(255,255,255,0.22); }
+        /* foco verde suave que aparece no hover */
+        .glass-glow::after{ content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none; opacity:0; transition:opacity .55s;
+            background:radial-gradient(120% 90% at 15% 0%, rgba(150,255,0,0.18), transparent 60%); }
+        .glass-hover:hover.glass-glow::after, .glass-glow.glass-hover:hover::after{ opacity:1; }
+
+        /* ===== Tipografia / títulos ===== */
+        .eyebrow{ display:inline-flex; align-items:center; gap:.5rem; font-size:.72rem; font-weight:600; letter-spacing:.22em; text-transform:uppercase;
+            color:var(--accent); padding:.45rem .9rem; border-radius:999px; border:1px solid rgba(150,255,0,0.30); background:rgba(150,255,0,0.06); }
+        .section-title{ font-family:'Sora'; font-weight:700; letter-spacing:-0.02em; font-size:2rem; line-height:1.1; color:#fff; }
+        @media (min-width:768px){ .section-title{ font-size:2.75rem; } }
+        .title-gradient{ background:linear-gradient(120deg,#fff 10%, var(--accent) 55%, var(--secondary)); -webkit-background-clip:text; background-clip:text; color:transparent; }
+        .lead{ color:rgba(255,255,255,0.74); font-size:1.02rem; line-height:1.65; }
+        .muted{ color:rgba(255,255,255,0.68); }
+
+        /* ===== Botões ===== */
+        .primary-btn{ display:inline-flex; align-items:center; justify-content:center; gap:.55rem; border-radius:999px;
+            background:linear-gradient(100deg,var(--secondary),var(--primary)); padding:.9rem 1.6rem; font-weight:600; color:#0a1500;
+            box-shadow:0 10px 35px rgba(150,255,0,0.30); transition:.35s; }
+        .primary-btn:hover{ filter:brightness(1.06); transform:translateY(-2px); box-shadow:0 16px 45px rgba(150,255,0,0.45); }
+        .ghost-btn{ display:inline-flex; align-items:center; justify-content:center; gap:.55rem; border-radius:999px;
+            padding:.9rem 1.6rem; font-weight:600; color:#fff; border:1px solid rgba(255,255,255,0.18);
+            background:rgba(255,255,255,0.04); backdrop-filter:blur(10px); transition:.35s; }
+        .ghost-btn:hover{ background:rgba(255,255,255,0.10); border-color:rgba(150,255,0,0.4); transform:translateY(-2px); }
+
+        /* ===== Header ===== */
+        .site-header{ transition:background .5s, backdrop-filter .5s, border-color .5s, box-shadow .5s; border-bottom:1px solid transparent; }
+        .site-header.scrolled, .site-header.menu-open{ background:rgba(8,11,15,0.78); backdrop-filter:blur(18px) saturate(160%); -webkit-backdrop-filter:blur(18px) saturate(160%);
+            border-bottom:1px solid rgba(255,255,255,0.08); box-shadow:0 10px 30px -18px rgba(0,0,0,0.8); }
+
+        /* ===== Hero ===== */
+        .hero-title{ font-family:'Sora'; font-weight:800; letter-spacing:-0.03em; font-size:clamp(3rem,11vw,6.5rem); line-height:.95; color:#fff; }
+        /* Onda como fundo do hero (atrás do texto) */
+        #waveCanvas{ position:absolute; inset:0; width:100%; height:100%; display:block; z-index:0; }
+        .hero-veil{ position:absolute; inset:0; z-index:1; pointer-events:none;
+            background:radial-gradient(60% 55% at 50% 45%, rgba(5,7,10,0.72), rgba(5,7,10,0.10) 72%); }
+        /* indicador de scroll */
+        .hero-scroll{ position:absolute; left:50%; bottom:1.6rem; transform:translateX(-50%); z-index:10; width:26px; height:42px; border:2px solid rgba(255,255,255,0.30); border-radius:14px; display:flex; justify-content:center; transition:border-color .3s; }
+        .hero-scroll:hover{ border-color:rgba(150,255,0,0.6); }
+        .hero-scroll span{ width:4px; height:8px; margin-top:7px; border-radius:2px; background:var(--accent); animation:scrollDot 1.8s ease-in-out infinite; }
+        @keyframes scrollDot{ 0%{ opacity:0; transform:translateY(0); } 30%{ opacity:1; } 60%{ opacity:1; transform:translateY(10px); } 100%{ opacity:0; transform:translateY(12px); } }
+        /* foco visível para teclado */
+        a:focus-visible, button:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; border-radius:8px; }
+
+        /* ===== Cards genéricos (glass) ===== */
+        .feature-card{ padding:1.5rem; text-align:left; }
+        .icon-badge{ display:inline-flex; height:3rem; width:3rem; align-items:center; justify-content:center; border-radius:0.9rem;
+            background:linear-gradient(135deg,var(--secondary),var(--primary)); color:#0a1500; box-shadow:0 10px 30px rgba(150,255,0,0.30); }
+        .card-title{ color:#fff; font-weight:600; }
+        .card-text{ color:rgba(255,255,255,0.74); }
+
+        /* ===== Serviços (stack isométrico animado) ===== */
+        .svc-layout{ display:grid; gap:3rem; align-items:center; margin-top:3.5rem; }
+        @media (min-width:1024px){ .svc-layout{ grid-template-columns:1fr 1fr; gap:1rem; } }
+        .svc-list{ display:flex; flex-direction:column; gap:.35rem; }
+        .svc-item{ position:relative; display:flex; gap:1rem; padding:.95rem 1.1rem; border-radius:1rem; cursor:default;
+            border:1px solid transparent; transition:background .4s, border-color .4s; }
+        .svc-item:hover, .svc-item.active{ background:rgba(255,255,255,0.04); border-color:rgba(150,255,0,0.25); }
+        .svc-item::before{ content:""; position:absolute; left:0; top:50%; height:0; width:3px; border-radius:3px; background:var(--primary); transform:translateY(-50%); transition:height .4s; box-shadow:0 0 12px rgba(150,255,0,.6); }
+        .svc-item:hover::before, .svc-item.active::before{ height:60%; }
+        .svc-idx{ font-family:'Space Grotesk'; font-weight:700; font-size:.78rem; color:var(--accent); padding-top:.2rem; min-width:1.7rem; }
+        .svc-item h4{ font-size:1.02rem; font-weight:600; color:#fff; letter-spacing:-0.01em; }
+        .svc-item p{ margin-top:.25rem; font-size:.82rem; line-height:1.2rem; color:rgba(255,255,255,0.72); }
+
+        .iso-scene{ position:relative; height:440px; perspective:1300px; }
+        .iso-stack{ position:absolute; inset:0; transform-style:preserve-3d; transform:rotateX(56deg) rotateZ(-45deg); }
+        .iso-layer{ position:absolute; top:50%; left:50%; width:46%; aspect-ratio:1/1;
+            transform:translate(-50%,-50%) translateZ(var(--zs,0));
+            opacity:0; transition:transform 1s cubic-bezier(.2,.8,.2,1), opacity 1s; }
+        .iso-scene.in .iso-layer{ opacity:1; transform:translate(-50%,-50%) translateZ(var(--zr,0)); }
+        .iso-face{ position:absolute; inset:0; border-radius:8px;
+            background:linear-gradient(135deg, rgba(150,255,0,0.10), rgba(255,255,255,0.02));
+            border:1px solid rgba(150,255,0,0.22);
+            box-shadow:0 2px 0 rgba(8,16,0,.5),0 4px 0 rgba(8,16,0,.45),0 6px 0 rgba(8,16,0,.4),0 8px 0 rgba(8,16,0,.35),0 10px 0 rgba(8,16,0,.3),0 12px 0 rgba(8,16,0,.25),0 14px 0 rgba(8,16,0,.2),0 50px 60px -25px rgba(0,0,0,.85);
+            transition:transform .45s, border-color .45s, box-shadow .45s, background .45s; }
+        .iso-layer.active .iso-face{ transform:scale(1.06); border-color:var(--primary);
+            background:linear-gradient(135deg, rgba(150,255,0,0.24), rgba(150,255,0,0.05));
+            box-shadow:0 2px 0 rgba(8,16,0,.5),0 4px 0 rgba(8,16,0,.45),0 6px 0 rgba(8,16,0,.4),0 8px 0 rgba(8,16,0,.35),0 10px 0 rgba(8,16,0,.3),0 12px 0 rgba(8,16,0,.25),0 14px 0 rgba(8,16,0,.2),0 0 45px rgba(150,255,0,.4),0 50px 60px -25px rgba(0,0,0,.85); }
+        .iso-logo-img{ position:absolute; top:50%; left:50%; width:40%; transform:translate(-50%,-50%); opacity:.85; filter:drop-shadow(0 0 12px rgba(150,255,0,.45)); pointer-events:none; }
+        @media (max-width:520px){ .iso-scene{ height:320px; } .iso-stack{ transform:rotateX(56deg) rotateZ(-45deg) scale(.78); } }
+
+        .badge{ background:rgba(150,255,0,0.10); color:var(--accent); font-size:.6rem; font-weight:600; letter-spacing:.08em; padding:.35rem .55rem; border-radius:.5rem; border:1px solid rgba(150,255,0,0.22); text-transform:uppercase; }
+
+        /* ===== Produtos ===== */
+        .product-grid{ display:grid; gap:1.25rem; }
+        @media (min-width:768px){ .product-grid{ grid-template-columns:repeat(3,1fr); } }
+        .product-card{ display:flex; flex-direction:column; padding:2.25rem 2.1rem; min-height:30rem; }
+        .product-top{ display:flex; align-items:flex-start; justify-content:space-between; gap:1rem; }
+        .product-num{ font-family:'Space Grotesk'; font-weight:700; line-height:.8; font-size:clamp(6rem,13vw,9.5rem);
+            color:transparent; -webkit-text-stroke:2.5px rgba(150,255,0,0.6); filter:drop-shadow(0 0 26px rgba(150,255,0,0.18)); transition:.45s; user-select:none; }
+        .product-card:hover .product-num{ -webkit-text-stroke-color:var(--primary); filter:drop-shadow(0 0 32px rgba(150,255,0,0.45)); }
+        .product-name{ margin-top:.85rem; font-size:1.55rem; font-weight:600; letter-spacing:-0.02em; color:#fff; }
+        .product-tagline{ margin-top:.35rem; font-size:.86rem; line-height:1.4rem; color:rgba(255,255,255,0.74); }
+        .product-badge{ background:rgba(150,255,0,0.10); color:var(--accent); font-size:.62rem; letter-spacing:.06em; font-weight:600; padding:.4rem .6rem; border-radius:0.6rem; text-transform:uppercase; border:1px solid rgba(150,255,0,0.25); white-space:nowrap; }
+        .product-link{ margin-top:1.25rem; align-self:flex-start; display:inline-flex; align-items:center; gap:.5rem;
+            font-size:.8rem; font-weight:600; letter-spacing:.03em; color:#0a1500; background:linear-gradient(100deg,var(--secondary),var(--primary));
+            padding:.65rem 1.15rem; border-radius:999px; box-shadow:0 8px 24px rgba(150,255,0,0.25); transition:.35s; }
+        .product-link:hover{ transform:translateY(-2px); box-shadow:0 12px 30px rgba(150,255,0,0.42); }
+        .product-link .mdi{ transition:transform .35s; }
+        .product-link:hover .mdi{ transform:translate(2px,-2px); }
+        .feature-list{ margin-top:1rem; display:grid; gap:.5rem; font-size:.82rem; line-height:1.3rem; }
+        .feature-item{ position:relative; padding-left:1.5rem; color:rgba(255,255,255,0.72); }
+        .feature-item .mdi{ position:absolute; left:0; top:1px; font-size:1rem; color:var(--primary); }
+        .product-meta{ margin-top:auto; padding-top:1rem; display:flex; flex-wrap:wrap; gap:.4rem; }
+        .tag{ background:rgba(255,255,255,0.06); color:rgba(255,255,255,0.82); font-size:.66rem; font-weight:500; padding:.35rem .6rem; border-radius:.5rem; border:1px solid rgba(255,255,255,0.12); letter-spacing:.04em; }
+
+        /* ===== Especialidades (círculo) ===== */
+        .specialty-ring{ border:1px solid rgba(150,255,0,0.28); box-shadow:0 0 40px rgba(150,255,0,0.10), inset 0 0 50px rgba(150,255,0,0.05); }
+        /* comet orbitando o anel */
+        .specialty-orbit{ position:absolute; inset:36px; border-radius:50%; pointer-events:none;
+            background:conic-gradient(from 0deg, rgba(150,255,0,0) 0deg, rgba(150,255,0,0) 285deg, rgba(184,255,77,0.9) 357deg, rgba(150,255,0,0) 360deg);
+            -webkit-mask:radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 3px));
+                    mask:radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 3px));
+            animation:orbitSpin 7s linear infinite; }
+        @keyframes orbitSpin{ to{ transform:rotate(360deg); } }
+        /* núcleo central pulsante */
+        .specialty-core{ position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:74px; height:74px; border-radius:50%; pointer-events:none;
+            display:flex; align-items:center; justify-content:center; background:radial-gradient(circle, rgba(150,255,0,0.16), rgba(150,255,0,0) 70%); }
+        .specialty-core::before, .specialty-core::after{ content:""; position:absolute; inset:16px; border-radius:50%; border:1px solid rgba(150,255,0,0.45); animation:corePulse 3.4s ease-out infinite; }
+        .specialty-core::after{ animation-delay:1.7s; }
+        @keyframes corePulse{ 0%{ transform:scale(.55); opacity:.9; } 100%{ transform:scale(2.7); opacity:0; } }
+        .specialty-core img{ width:40px; opacity:.9; filter:drop-shadow(0 0 10px rgba(150,255,0,0.55)); }
+        /* raios do centro até cada especialidade */
+        .specialty-spoke{ position:absolute; height:2px; transform-origin:left center; pointer-events:none; border-radius:2px;
+            background:linear-gradient(90deg, rgba(150,255,0,0) 0%, rgba(150,255,0,0.06) 45%, rgba(150,255,0,0.4) 100%);
+            opacity:.5; transition:opacity .4s, filter .4s, background .4s; }
+        .specialty-spoke.active{ opacity:1; background:linear-gradient(90deg, rgba(150,255,0,0.05) 0%, rgba(150,255,0,0.35) 45%, rgba(150,255,0,1) 100%); filter:drop-shadow(0 0 6px rgba(150,255,0,0.7)); }
+        .specialty-dot{ position:absolute; background:var(--primary); box-shadow:0 0 12px rgba(150,255,0,0.85); }
+        .specialty-dot::after{ content:""; position:absolute; inset:0; border-radius:50%; background:rgba(150,255,0,0.5); pointer-events:none; animation:dotRipple 2.6s ease-out infinite; animation-delay:var(--rdelay,0s); }
+        @keyframes dotRipple{ 0%{ transform:scale(1); opacity:.65; } 70%,100%{ transform:scale(3.6); opacity:0; } }
+        .specialty-wrapper{ cursor:default; transition:transform .35s; }
+        .specialty-wrapper.active{ z-index:5; }
+        .specialty-wrapper.active .specialty-dot{ box-shadow:0 0 22px rgba(150,255,0,1), 0 0 4px #fff; }
+        .specialty-label{ color:rgba(255,255,255,0.78); transition:color .35s, text-shadow .35s; }
+        .specialty-wrapper.active .specialty-label{ color:var(--primary); text-shadow:0 0 14px rgba(150,255,0,0.5); }
+        @media (prefers-reduced-motion:reduce){ .specialty-orbit, .specialty-core::before, .specialty-core::after, .specialty-dot::after{ animation:none; } }
+
+        /* ===== Wave divider SVG ===== */
+        .wave-divider{ line-height:0; overflow:hidden; }
+        .wave-divider svg{ width:200%; height:90px; display:block; animation:waveSlide 22s linear infinite; }
+        @media (min-width:768px){ .wave-divider svg{ height:130px; } }
+        @keyframes waveSlide{ from{ transform:translateX(0);} to{ transform:translateX(-50%);} }
+
+        /* ===== Scroll reveal ===== */
+        [data-reveal]{ opacity:0; transform:translateY(34px); transition:opacity .85s cubic-bezier(.2,.7,.2,1), transform .85s cubic-bezier(.2,.7,.2,1); }
+        [data-reveal].in{ opacity:1; transform:none; }
+
+        @media (prefers-reduced-motion:reduce){
+            *{ animation:none !important; transition:none !important; }
+            [data-reveal]{ opacity:1; transform:none; }
+        }
     </style>
 </head>
-<body class="antialiased text-dark">
+<body class="antialiased">
+    <!-- Fundos globais -->
+    <div class="bg-aurora" aria-hidden="true"></div>
+    <div class="bg-grid" aria-hidden="true"></div>
+
     <!-- Header -->
-    <header id="siteHeader" class="hidden md:block fixed inset-x-0 top-0 z-50 text-white/95 shadow transition-colors duration-500">
+    <header id="siteHeader" class="site-header fixed inset-x-0 top-0 z-50 text-white">
         <div class="mx-auto max-w-6xl px-4">
             <div class="flex items-center justify-between py-4">
-                <a href="#" class="flex flex-col leading-tight">
-                    <img src="./assets/logo-ekatelos.png" alt="EKATELOS" class="h-10 w-auto select-none" loading="lazy" decoding="async" />
+                <a href="#hero" class="flex items-center" aria-label="EKATELOS — início">
+                    <img src="./assets/logo-ekatelos.png" alt="EKATELOS" class="h-10 w-auto select-none" fetchpriority="high" decoding="async" />
                 </a>
                 <nav class="hidden md:block">
-                    <ul class="flex items-center gap-8 text-sm font-medium">
-                        <li><a class="transition-colors hover:text-dark/80" href="#about">Sobre</a></li>
-                        <li><a class="transition-colors hover:text-dark/80" href="#services">Serviços</a></li>
-                        <li><a class="transition-colors hover:text-dark/80" href="#products">Produtos</a></li>
-                        <li><a class="transition-colors hover:text-dark/80" href="#portfolio">Portfólio</a></li>
+                    <ul class="flex items-center gap-8 text-sm font-medium text-white/80">
+                        <li><a class="transition-colors hover:text-primary" href="#services">Serviços</a></li>
+                        <li><a class="transition-colors hover:text-primary" href="#products">Produtos</a></li>
+                        <li><a class="transition-colors hover:text-primary" href="#specialties">Especialidades</a></li>
+                        <li><a class="transition-colors hover:text-primary" href="#portfolio">Portfólio</a></li>
+                        <li><a class="transition-colors hover:text-primary" href="#about">Essência</a></li>
                     </ul>
                 </nav>
-                <a href="#contact" class="hidden md:inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-semibold text-black shadow-glow transition hover:opacity-90">Fale conosco</a>
-                <button id="menuBtn" aria-label="Abrir menu" class="inline-flex items-center justify-center rounded-md border border-white/30 px-3 py-2 md:hidden">
+                <a href="#contact" class="hidden md:inline-flex primary-btn !px-5 !py-2.5 text-sm">Fale conosco</a>
+                <button id="menuBtn" aria-label="Abrir menu" class="inline-flex items-center justify-center rounded-lg border border-white/20 bg-white/5 px-3 py-2 text-white md:hidden">
                     <i class="mdi mdi-menu text-xl"></i>
                 </button>
             </div>
             <div id="mobileMenu" class="hidden pb-4 md:hidden">
-                <ul class="grid gap-2 text-sm">
-                    <li><a class="block rounded px-3 py-2 transition hover:bg-white/10" href="#about">Sobre</a></li>
-                    <li><a class="block rounded px-3 py-2 transition hover:bg-white/10" href="#services">Serviços</a></li>
-                    <li><a class="block rounded px-3 py-2 transition hover:bg-white/10" href="#specialties">Especialidades</a></li>
-                    <li><a class="block rounded px-3 py-2 transition hover:bg-white/10" href="#products">Produtos</a></li>
-                    <li><a class="block rounded px-3 py-2 transition hover:bg-white/10" href="#portfolio">Portfólio</a></li>
-                    <li><a class="block rounded px-3 py-2 transition hover:bg-white/10" href="#contact">Contato</a></li>
+                <ul class="grid gap-1 text-sm">
+                    <li><a class="block rounded-lg px-3 py-2.5 text-white/85 transition hover:bg-white/10" href="#services">Serviços</a></li>
+                    <li><a class="block rounded-lg px-3 py-2.5 text-white/85 transition hover:bg-white/10" href="#products">Produtos</a></li>
+                    <li><a class="block rounded-lg px-3 py-2.5 text-white/85 transition hover:bg-white/10" href="#specialties">Especialidades</a></li>
+                    <li><a class="block rounded-lg px-3 py-2.5 text-white/85 transition hover:bg-white/10" href="#portfolio">Portfólio</a></li>
+                    <li><a class="block rounded-lg px-3 py-2.5 text-white/85 transition hover:bg-white/10" href="#about">Essência</a></li>
+                    <li><a class="block rounded-lg px-3 py-2.5 text-primary font-semibold transition hover:bg-white/10" href="#contact">Contato</a></li>
                 </ul>
             </div>
         </div>
     </header>
 
-    <!-- Hero h-screen gradient with interactive particle globe -->
-    <section id="hero" class="relative flex min-h-screen items-center bg-gradient-to-br from-[#070417] to-[#002b0b] pt-10 md:pt-28 text-white">
-            <div class="mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-10 px-4 md:grid-cols-2">
-                <!-- Left: Title -->
-                <div class="space-y-6 text-center md:text-left">
-                    <!-- Logo apenas no mobile -->
-                    <img src="./assets/logo-ekatelos.png" alt="Logo EKATELOS" class="mx-auto h-16 w-auto md:hidden" loading="lazy" decoding="async" />
-                    <h1 class="text-5xl font-extrabold tracking-tight md:text-6xl">EKATELOS</h1>
-                    <div class="mx-auto md:mx-0">
-                        <p class="max-w-md mx-auto md:mx-0 text-white/90">Do início ao fim.</p>
-                        <p class="max-w-lg mx-auto md:mx-0">Transformamos ideias em tecnologia que impulsiona negócios.</p>
-                    </div>
-                    <!-- Botões desktop (mantidos na coluna esquerda) -->
-                    <div class="hidden md:flex flex-row gap-3">
-                        <a href="#contact" class="inline-flex items-center justify-center rounded-md bg-accent px-6 py-3 font-semibold text-dark shadow-glow transition hover:brightness-95 text-center">Fale conosco</a>
-                        <a href="#about" class="inline-flex items-center justify-center rounded-md border border-white/30 px-6 py-3 font-semibold text-white transition hover:bg-white/10 text-center">Sobre nós</a>
-                    </div>
-                </div>
-                <!-- Right: Particle Globe -->
-                <div class="relative isolate mx-auto aspect-square w-[95%] max-w-lg md:w-full">
-                    <div class="absolute inset-0 -z-10 rounded-full opacity-25 blur-3xl" style="background: radial-gradient(60% 60% at 50% 50%, rgba(150,255,0,0.40) 0%, rgba(150,255,0,0.0) 70%);"></div>
-                    <canvas id="particleGlobe" class="absolute inset-0 h-full w-full"></canvas>
-                </div>
-                <!-- Botões mobile (abaixo do Globe) -->
-                <div class="flex flex-col items-center w-full gap-3 md:hidden -mt-4">
-                    <a href="#contact" class="inline-flex w-[90%] items-center justify-center rounded-md bg-accent px-6 py-3 font-semibold text-dark shadow-glow transition hover:brightness-95 text-center">Fale conosco</a>
-                    <a href="#about" class="inline-flex w-[90%] items-center justify-center rounded-md border border-white/30 px-6 py-3 font-semibold text-white transition hover:bg-white/10 text-center">Sobre nós</a>
-                </div>
+    <!-- Hero -->
+    <section id="hero" class="relative flex min-h-screen items-center justify-center overflow-hidden pt-28 pb-16 md:pt-32 text-white">
+        <!-- Onda animada lenta como fundo -->
+        <canvas id="waveCanvas"></canvas>
+        <div class="hero-veil" aria-hidden="true"></div>
+        <!-- Conteúdo -->
+        <div class="relative z-10 mx-auto w-full max-w-3xl px-4 text-center space-y-7" data-reveal>
+            <h1 class="hero-title">EKATELOS</h1>
+            <div class="space-y-2 max-w-xl mx-auto">
+                <p class="text-xl font-medium text-white/90">Transformamos ideias em tecnologia que impulsiona negócios.</p>
+                <p class="lead"></p>
             </div>
-        </section>
-
-    <!-- Sobre -->
-    <section id="about" class="scroll-mt-24 py-16 md:py-20">
-        <div class="mx-auto max-w-6xl px-4">
-            <div class="mx-auto max-w-3xl text-center">
-                <h2 class="section-title">Nossa essência</h2>
-                <p class="mt-3 text-slate-600">Resolver problemas reais exige mais do que técnica. Unimos visão de negócio, engenharia e execução disciplinada para transformar objetivos em resultado mensurável.</p>
-            </div>
-            <div class="value-grid mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
-                <div class="card-surface p-5 text-center">
-                    <div class="icon-badge"><i class="mdi mdi-shield-check-outline text-2xl"></i></div>
-                    <h3 class="text-sm font-bold uppercase tracking-wide">Excelência</h3>
-                    <p class="mt-2 text-xs text-slate-700">Padrões altos de qualidade do diagnóstico à entrega.</p>
-                </div>
-                <div class="card-surface p-5 text-center">
-                    <div class="icon-badge"><i class="mdi mdi-eye-outline text-2xl"></i></div>
-                    <h3 class="text-sm font-bold uppercase tracking-wide">Transparência</h3>
-                    <p class="mt-2 text-xs text-slate-700">Comunicação clara, prazos realistas e governança.</p>
-                </div>
-                <div class="card-surface p-5 text-center">
-                    <div class="icon-badge"><i class="mdi mdi-lightbulb-on-outline text-2xl"></i></div>
-                    <h3 class="text-sm font-bold uppercase tracking-wide">Inovação</h3>
-                    <p class="mt-2 text-xs text-slate-700">Tecnologia de ponta aplicada ao que importa.</p>
-                </div>
-                <div class="card-surface p-5 text-center">
-                    <div class="icon-badge"><i class="mdi mdi-account-group-outline text-2xl"></i></div>
-                    <h3 class="text-sm font-bold uppercase tracking-wide">Colaboração</h3>
-                    <p class="mt-2 text-xs text-slate-700">Trabalhamos lado a lado com o seu time.</p>
-                </div>
-                <div class="card-surface p-5 text-center">
-                    <div class="icon-badge"><i class="mdi mdi-autorenew text-2xl"></i></div>
-                    <h3 class="text-sm font-bold uppercase tracking-wide">Adaptação</h3>
-                    <p class="mt-2 text-xs text-slate-700">Soluções sob medida para cada contexto.</p>
-                </div>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+                <a href="#contact" class="primary-btn w-[90%] sm:w-auto">Fale conosco</a>
+                <a href="#about" class="ghost-btn w-[90%] sm:w-auto">Sobre nós</a>
             </div>
         </div>
+        <a href="#services" class="hero-scroll" aria-label="Rolar para baixo"><span></span></a>
     </section>
-
-        <!-- Especialidades: círculo fino com labels ao redor -->
-        <section id="specialties" class="scroll-mt-24 py-16 md:py-20">
-            <div class="mx-auto max-w-6xl px-4 ">
-                <div class="mx-auto max-w-3xl text-center">
-                    <h2 class="section-title">Especialidades</h2>
-                    <p class="mt-3 text-slate-600">Conhecimento profundo em diversas frentes para compor soluções completas.</p>
-                </div>
-
-                <!-- Circle layout agora também no mobile -->
-                <div id="specialtyContainer" class="relative mx-auto mt-14 flex aspect-square w-full max-w-[340px] sm:max-w-[440px] md:mt-20 md:max-w-[560px]">
-                    <div class="specialty-ring absolute inset-9 rounded-full border-2 border-primary"></div>
-                    <!-- Labels e bolinhas serão posicionados via JS -->
-                </div>
-            </div>
-        </section>
-
 
     <!-- Serviços -->
-    <section id="services" class="scroll-mt-24 bg-light py-20 md:py-28">
-        <div class="services-deco"></div>
-        <div class="mx-auto max-w-6xl px-4 relative">
-            <div class="mx-auto max-w-3xl text-center">
-                <h2 class="section-title">Serviços</h2>
-                <p class="mt-4 text-base text-slate-700">Desenhamos, construímos e sustentamos software personalizado alinhado a objetivos de negócio. Sem camadas extras, sem desperdício — apenas engenharia focada em valor entregue.</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">01</div>
-                    <h3 class="service-title">Diagnóstico</h3>
-                    <p class="service-text">Diagnóstico profundo, mapeamento de oportunidades e definição de escopo mínimo viável com priorização orientada a retorno.</p>
-                    <div class="service-meta">
-                        <span class="badge">Workshops</span><span class="badge">Roadmap</span><span class="badge">Validação</span>
+    <section id="services" class="scroll-mt-24 py-20 md:py-28">
+        <div class="mx-auto max-w-6xl px-4">
+            <div class="svc-layout">
+                <!-- Esquerda: lista de serviços -->
+                <div data-reveal>
+                    <span class="eyebrow">Serviços</span>
+                    <h2 class="section-title mt-5"><span class="title-gradient">Engenharia focada em valor</span></h2>
+                    <p class="lead mt-4 max-w-md">Desenhamos, construímos e sustentamos software personalizado alinhado a objetivos de negócio — sem camadas extras, sem desperdício.</p>
+                    <div class="svc-list mt-8" id="svcList">
+                        <div class="svc-item" data-svc="0">
+                            <span class="svc-idx">01</span>
+                            <div><h4>Diagnóstico &amp; Estratégia</h4><p>Entendemos o problema, mapeamos oportunidades e definimos escopo e roadmap.</p></div>
+                        </div>
+                        <div class="svc-item" data-svc="1">
+                            <span class="svc-idx">02</span>
+                            <div><h4>Arquitetura &amp; Fundações</h4><p>Base técnica escalável, segura e observável desde o início.</p></div>
+                        </div>
+                        <div class="svc-item" data-svc="2">
+                            <span class="svc-idx">03</span>
+                            <div><h4>Desenvolvimento &amp; Integrações</h4><p>Construção em ciclos curtos, com APIs e integrações conectando os sistemas.</p></div>
+                        </div>
+                        <div class="svc-item" data-svc="3">
+                            <span class="svc-idx">04</span>
+                            <div><h4>Lançamento &amp; Go-live</h4><p>Deploy, QA, migração de dados e treinamento do time.</p></div>
+                        </div>
+                        <div class="svc-item" data-svc="4">
+                            <span class="svc-idx">05</span>
+                            <div><h4>Operação &amp; Evolução</h4><p>Monitoramento, suporte e melhoria contínua de performance.</p></div>
+                        </div>
                     </div>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">02</div>
-                    <h3 class="service-title">Arquitetura & Fundações</h3>
-                    <p class="service-text">Desenho de arquitetura escalável, pipelines, segurança e observabilidade prontos desde o início para evitar retrabalho.</p>
-                    <div class="service-meta">
-                        <span class="badge">Cloud</span><span class="badge">DevOps</span><span class="badge">Segurança</span>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">03</div>
-                    <h3 class="service-title">Desenvolvimento Ágil</h3>
-                    <p class="service-text">Time sênior full‑stack com ciclos curtos, testes automatizados e entregas incrementais visíveis semana a semana.</p>
-                    <div class="service-meta">
-                        <span class="badge">Full‑stack</span><span class="badge">Testes</span><span class="badge">CI/CD</span>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">04</div>
-                    <h3 class="service-title">Plataformas & Integrações</h3>
-                    <p class="service-text">Integrações sob medida, APIs bem versionadas e automações para conectar ecossistemas e reduzir operações manuais.</p>
-                    <div class="service-meta">
-                        <span class="badge">APIs</span><span class="badge">Automação</span><span class="badge">Escalabilidade</span>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">05</div>
-                    <h3 class="service-title">Suporte & Evolução</h3>
-                    <p class="service-text">Monitoramento ativo, gestão de incidentes, backlog evolutivo e otimizações de performance contínuas.</p>
-                    <div class="service-meta">
-                        <span class="badge">SLA</span><span class="badge">Observability</span><span class="badge">Melhoria Contínua</span>
+                <!-- Direita: stack isométrico animado -->
+                <div class="iso-scene" id="isoScene" aria-hidden="true">
+                    <div class="iso-stack">
+                        <div class="iso-layer" data-svc="0" style="--zr:156px; --zs:405px; transition-delay:0s"><span class="iso-face"></span></div>
+                        <div class="iso-layer" data-svc="1" style="--zr:78px; --zs:203px; transition-delay:.07s"><span class="iso-face"></span></div>
+                        <div class="iso-layer" data-svc="2" style="--zr:0px; --zs:0px; transition-delay:.14s"><span class="iso-face"></span></div>
+                        <div class="iso-layer" data-svc="3" style="--zr:-78px; --zs:-203px; transition-delay:.21s"><span class="iso-face"></span></div>
+                        <div class="iso-layer" data-svc="4" style="--zr:-156px; --zs:-405px; transition-delay:.28s">
+                            <span class="iso-face"></span>
+                            <img src="./assets/logo-ekatelos.png" class="iso-logo-img" alt="" loading="lazy" decoding="async" />
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-
     <!-- Produtos -->
-    <section id="products" class="scroll-mt-24 bg-light py-20 md:py-28">
-        <div class="section-bg-deco"></div>
-        <div class="mx-auto max-w-6xl px-4 relative">
-            <div class="mx-auto max-w-3xl text-center">
-                <h2 class="section-title">Plataformas & Produtos</h2>
-                <p class="mt-4 text-base text-slate-700">Aplicamos o que construímos diariamente para clientes: produtos enxutos, focados em resolver problemas operacionais reais e acelerar times sem dependência excessiva de implementação.</p>
+    <section id="products" class="scroll-mt-24 py-20 md:py-28">
+        <div class="mx-auto max-w-6xl px-4">
+            <div class="mx-auto max-w-3xl text-center" data-reveal>
+                <span class="eyebrow">Plataformas &amp; Produtos</span>
+                <h2 class="section-title mt-5"><span class="title-gradient">Produtos prontos para escalar</span></h2>
+                <p class="lead mt-4">Aplicamos o que construímos diariamente para clientes: produtos enxutos, focados em resolver problemas operacionais reais e acelerar times sem dependência excessiva de implementação.</p>
             </div>
             <div class="product-grid mt-14">
                 <!-- Chauvet -->
-                <article class="product-card" aria-labelledby="prod-chauvet-name">
-                    <div class="product-head">
-                        <div class="product-icon">
-                            01
-                        </div>
-                        <div>
-                            <h3 id="prod-chauvet-name" class="product-name">Chauvet</h3>
-                        </div>
-                        <span class="product-badge">Comunicação</span>
+                <article class="glass glass-hover glass-glow product-card" aria-labelledby="prod-chauvet-name" data-reveal>
+                    <div class="product-top">
+                        <span class="product-num">01</span>
+                        <span class="product-badge">Flows</span>
                     </div>
-                    <p class="mt-3 text-sm leading-relaxed text-slate-700">Centralize canais, reduza tempo de resposta e crie fluxos automatizados.</p>
+                    <h3 id="prod-chauvet-name" class="product-name">Chauvet</h3>
+                    <p class="product-tagline">Motor de automações, CRM customizável e central de atendimentos via Whatsapp.</p>
                     <div class="feature-list" aria-label="Principais recursos">
-                        <div class="feature-item"><i class="mdi mdi-check-bold"></i>Fluxo da Chatbots com integrações</div>
-                        <div class="feature-item"><i class="mdi mdi-check-bold"></i>CRM e marketing</div>
-                        <div class="feature-item"><i class="mdi mdi-check-bold"></i>SAC híbrido (humano + IA)</div>
+                        <div class="feature-item"><i class="mdi mdi-check-bold"></i>Motor de automações e fluxos</div>
+                        <div class="feature-item"><i class="mdi mdi-check-bold"></i>CRM customizável</div>
+                        <div class="feature-item"><i class="mdi mdi-check-bold"></i>Central de atendimentos omnichannel</div>
                     </div>
                     <div class="product-meta">
                         <span class="tag">Chatbot</span>
                         <span class="tag">SAC</span>
                         <span class="tag">CRM</span>
-                        <span class="tag">Relatórios</span>
+                        <span class="tag">Automação</span>
                     </div>
-
+                    <a class="product-link" href="https://chauvet.ekatelos.com/public" target="_blank" rel="noopener">Acessar Chauvet <i class="mdi mdi-arrow-top-right"></i></a>
                 </article>
                 <!-- Akrivos -->
-                <article class="product-card" aria-labelledby="prod-akrivos-name">
-                    <div class="product-head">
-                        <div class="product-icon">02</div>
-                        <div>
-                            <h3 id="prod-akrivos-name" class="product-name">Akrivos</h3>
-                        </div>
-                        <span class="product-badge">Agendamentos</span>
+                <article class="glass glass-hover glass-glow product-card" aria-labelledby="prod-akrivos-name" data-reveal>
+                    <div class="product-top">
+                        <span class="product-num">02</span>
+                        <span class="product-badge">Saúde</span>
                     </div>
-                    <p class="mt-3 text-sm leading-relaxed text-slate-700">Plataforma de agendamentos, assinatura e gestão de serviços.</p>
+                    <h3 id="prod-akrivos-name" class="product-name">Akrivos</h3>
+                    <p class="product-tagline">Plataforma para gestão de clínicas de saúde.</p>
                     <div class="feature-list" aria-label="Principais recursos">
-                        <div class="feature-item"><i class="mdi mdi-check-bold"></i>Agendamento de serviços</div>
-                        <div class="feature-item"><i class="mdi mdi-check-bold"></i>Assinaturas recorrentes</div>
-                        <div class="feature-item"><i class="mdi mdi-check-bold"></i>Relatórios gerenciais</div>
+                        <div class="feature-item"><i class="mdi mdi-check-bold"></i>Agendamento de consultas</div>
+                        <div class="feature-item"><i class="mdi mdi-check-bold"></i>Gestão de pacientes e prontuário</div>
+                        <div class="feature-item"><i class="mdi mdi-check-bold"></i>Assinaturas e gestão financeira</div>
                     </div>
                     <div class="product-meta">
+                        <span class="tag">Clínicas</span>
+                        <span class="tag">Agenda</span>
+                        <span class="tag">Pacientes</span>
+                        <span class="tag">Financeiro</span>
                     </div>
-              
+                    <a class="product-link" href="https://akrivos.ekatelos.com/public" target="_blank" rel="noopener">Acessar Akrivos <i class="mdi mdi-arrow-top-right"></i></a>
                 </article>
                 <!-- Manteio -->
-                <article class="product-card" aria-labelledby="prod-manteio-name">
-                    <div class="product-head">
-                        <div class="product-icon">03</div>
-                        <div>
-                            <h3 id="prod-manteio-name" class="product-name">Manteio</h3>
-                        </div>
+                <article class="glass glass-hover glass-glow product-card" aria-labelledby="prod-manteio-name" data-reveal>
+                    <div class="product-top">
+                        <span class="product-num">03</span>
                         <span class="product-badge">IA</span>
                     </div>
-                    <p class="mt-3 text-sm leading-relaxed text-slate-700">IA personalizada para empresas.</p>
+                    <h3 id="prod-manteio-name" class="product-name">Manteio</h3>
+                    <p class="product-tagline">Serviços de IA personalizada para empresas.</p>
                     <div class="feature-list" aria-label="Principais recursos">
-                        <div class="feature-item"><i class="mdi mdi-check-bold"></i>Base de conhecimento do cliente</div>
-                        <div class="feature-item"><i class="mdi mdi-check-bold"></i>Consulta de informação realtime</div>
+                        <div class="feature-item"><i class="mdi mdi-check-bold"></i>Assistentes de IA sob medida</div>
+                        <div class="feature-item"><i class="mdi mdi-check-bold"></i>Base de conhecimento (RAG)</div>
                         <div class="feature-item"><i class="mdi mdi-check-bold"></i>Automação de processos</div>
                     </div>
                     <div class="product-meta">
-                        <span class="tag">Agents</span>
+                        <span class="tag">IA</span>
                         <span class="tag">RAG</span>
-                        <span class="tag">MCP</span>
-                        <span class="tag">Analytics</span>
+                        <span class="tag">Agents</span>
+                        <span class="tag">Beta</span>
                     </div>
- 
+                    <a class="product-link" href="https://manteio.ekatelos.com" target="_blank" rel="noopener">Acessar Manteio <i class="mdi mdi-arrow-top-right"></i></a>
                 </article>
             </div>
         </div>
     </section>
 
-    <!-- Portfólio -->
-    <section id="portfolio" class="scroll-mt-24 py-16 md:py-20">
+    <!-- Especialidades -->
+    <section id="specialties" class="scroll-mt-24 py-20 md:py-28">
         <div class="mx-auto max-w-6xl px-4">
-            <div class="mx-auto max-w-3xl text-center">
-            <h2 class="section-title">Portfólio</h2>
-            <p class="mt-3 text-slate-600">Alguns exemplos de projetos e setores que já entregamos soluções.</p>
+            <div class="mx-auto max-w-3xl text-center" data-reveal>
+                <span class="eyebrow">Especialidades</span>
+                <h2 class="section-title mt-5"><span class="title-gradient">Conhecimento de ponta a ponta</span></h2>
+                <p class="lead mt-4">Conhecimento profundo em diversas frentes para compor soluções completas.</p>
             </div>
-            <div class="portfolio-grid mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <!-- Varejo -->
-            <div class="card-surface p-6">
-                <div class="icon-badge" aria-hidden="true"><i class="mdi mdi-store-outline text-2xl"></i></div>
-                <h3 class="text-base font-bold">Varejo</h3>
-                <div class="text-sm font-semibold text-secondary">Varejista de moda</div>
-                <p class="mt-2 text-xs text-slate-700">Sistema de ERP completo da empresa: ecommerce, gestão, financeiro, expedição de pedidos, automação de marketing.</p>
+            <div id="specialtyContainer" class="relative mx-auto mt-14 flex aspect-square w-full max-w-[340px] sm:max-w-[440px] md:mt-20 md:max-w-[560px]" data-reveal>
+                <div class="specialty-ring absolute inset-9 rounded-full"></div>
+                <div class="specialty-orbit"></div>
+                <div class="specialty-core"><img src="./assets/logo-ekatelos.png" alt="" loading="lazy" decoding="async" /></div>
             </div>
-            
-            <!-- Saúde -->
-            <div class="card-surface p-6">
-                <div class="icon-badge" aria-hidden="true"><i class="mdi mdi-hospital-box-outline text-2xl"></i></div>
-                <h3 class="text-base font-bold">Saúde</h3>
-                <div class="text-sm font-semibold text-secondary">Clínica e plano de saúde</div>
-                <p class="mt-2 text-xs text-slate-700">Plataforma de atendimento, prontuário médico, agendamento, planos de assinatura, gestão financeira, telemedicina e mais.</p>
-            </div>
-            
-            <!-- Náutico -->
-            <div class="card-surface p-6">
-                <div class="icon-badge" aria-hidden="true"><i class="mdi mdi-ferry text-2xl"></i></div>
-                <h3 class="text-base font-bold">Náutico</h3>
-                <div class="text-sm font-semibold text-secondary">Serviços elétricos para embarcações</div>
-                <p class="mt-2 text-xs text-slate-700">Hardware para controle de aparelhos a bordo e portal para customização do aplicativo embarcado.</p>
-            </div>
+        </div>
+    </section>
 
-            <!-- Logística -->
-            <div class="card-surface p-6">
-                <div class="icon-badge" aria-hidden="true"><i class="mdi mdi-truck-outline text-2xl"></i></div>
-                <h3 class="text-base font-bold">Logística</h3>
-                <div class="text-sm font-semibold text-secondary">Software para transportadoras</div>
-                <p class="mt-2 text-xs text-slate-700">Sistema para gestão de entregas, otimização de rotas e gestão de frotas.</p>
-            </div>
-            <!-- Jurídico -->
-            <div class="card-surface p-6">
-                <div class="icon-badge" aria-hidden="true"><i class="mdi mdi-scale-balance text-2xl"></i></div>
-                <h3 class="text-base font-bold">Jurídico</h3>
-                <div class="text-sm font-semibold text-secondary">Escritório</div>
-                <p class="mt-2 text-xs text-slate-700">Plataforma de gerenciamento de processos, consulta de orgãos públicos, scraping de dados, automações e integrações.</p>
-            </div>
+    <!-- Onda divisória -->
+    <div class="wave-divider" aria-hidden="true">
+        <svg viewBox="0 0 2880 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill="rgba(118,204,0,0.07)" d="M0,56 C240,16 480,104 720,72 C960,40 1200,8 1440,40 C1680,72 1920,104 2160,72 C2400,40 2640,16 2880,56 L2880,120 L0,120 Z"></path>
+        </svg>
+    </div>
 
-            <!-- Hotelaria -->
-            <div class="card-surface p-6">
-                <div class="icon-badge" aria-hidden="true"><i class="mdi mdi-bed-outline text-2xl"></i></div>
-                <h3 class="text-base font-bold">Hotelaria</h3>
-                <div class="text-sm font-semibold text-secondary">Rede de hostels</div>
-                <p class="mt-2 text-xs text-slate-700">Chatbot para check‑in/out, automações internas e comunicação com hóspedes.</p>
+    <!-- Portfólio -->
+    <section id="portfolio" class="scroll-mt-24 py-20 md:py-28">
+        <div class="mx-auto max-w-6xl px-4">
+            <div class="mx-auto max-w-3xl text-center" data-reveal>
+                <span class="eyebrow">Portfólio</span>
+                <h2 class="section-title mt-5"><span class="title-gradient">Soluções que entregamos</span></h2>
+                <p class="lead mt-4">Alguns exemplos de projetos e setores que já entregamos soluções.</p>
             </div>
+            <div class="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Varejo -->
+                <div class="glass glass-hover glass-glow feature-card" data-reveal>
+                    <div class="icon-badge" aria-hidden="true"><i class="mdi mdi-store-outline text-2xl"></i></div>
+                    <h3 class="card-title mt-4 text-base font-semibold">Varejo</h3>
+                    <div class="text-sm font-semibold text-primary">Varejista de moda</div>
+                    <p class="card-text mt-2 text-sm">Sistema de ERP completo da empresa: ecommerce, gestão, financeiro, expedição de pedidos, automação de marketing.</p>
+                </div>
+                <!-- Saúde -->
+                <div class="glass glass-hover glass-glow feature-card" data-reveal>
+                    <div class="icon-badge" aria-hidden="true"><i class="mdi mdi-hospital-box-outline text-2xl"></i></div>
+                    <h3 class="card-title mt-4 text-base font-semibold">Saúde</h3>
+                    <div class="text-sm font-semibold text-primary">Clínica e plano de saúde</div>
+                    <p class="card-text mt-2 text-sm">Plataforma de atendimento, prontuário médico, agendamento, planos de assinatura, gestão financeira, telemedicina e mais.</p>
+                </div>
+                <!-- Náutico -->
+                <div class="glass glass-hover glass-glow feature-card" data-reveal>
+                    <div class="icon-badge" aria-hidden="true"><i class="mdi mdi-ferry text-2xl"></i></div>
+                    <h3 class="card-title mt-4 text-base font-semibold">Náutico</h3>
+                    <div class="text-sm font-semibold text-primary">Serviços elétricos para embarcações</div>
+                    <p class="card-text mt-2 text-sm">Hardware para controle de aparelhos a bordo e portal para customização do aplicativo embarcado.</p>
+                </div>
+                <!-- Logística -->
+                <div class="glass glass-hover glass-glow feature-card" data-reveal>
+                    <div class="icon-badge" aria-hidden="true"><i class="mdi mdi-truck-outline text-2xl"></i></div>
+                    <h3 class="card-title mt-4 text-base font-semibold">Logística</h3>
+                    <div class="text-sm font-semibold text-primary">Software para transportadoras</div>
+                    <p class="card-text mt-2 text-sm">Sistema para gestão de entregas, otimização de rotas e gestão de frotas.</p>
+                </div>
+                <!-- Jurídico -->
+                <div class="glass glass-hover glass-glow feature-card" data-reveal>
+                    <div class="icon-badge" aria-hidden="true"><i class="mdi mdi-scale-balance text-2xl"></i></div>
+                    <h3 class="card-title mt-4 text-base font-semibold">Jurídico</h3>
+                    <div class="text-sm font-semibold text-primary">Escritório</div>
+                    <p class="card-text mt-2 text-sm">Plataforma de gerenciamento de processos, consulta de orgãos públicos, scraping de dados, automações e integrações.</p>
+                </div>
+                <!-- Hotelaria -->
+                <div class="glass glass-hover glass-glow feature-card" data-reveal>
+                    <div class="icon-badge" aria-hidden="true"><i class="mdi mdi-bed-outline text-2xl"></i></div>
+                    <h3 class="card-title mt-4 text-base font-semibold">Hotelaria</h3>
+                    <div class="text-sm font-semibold text-primary">Rede de hostels</div>
+                    <p class="card-text mt-2 text-sm">Chatbot para check‑in/out, automações internas e comunicação com hóspedes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Essência -->
+    <section id="about" class="scroll-mt-24 py-20 md:py-28">
+        <div class="mx-auto max-w-6xl px-4">
+            <div class="mx-auto max-w-3xl text-center" data-reveal>
+                <span class="eyebrow">Nossa essência</span>
+                <h2 class="section-title mt-5"><span class="title-gradient">Resultado com propósito</span></h2>
+                <p class="lead mt-4">Resolver problemas reais exige mais do que técnica. Unimos visão de negócio, engenharia e execução disciplinada para transformar objetivos em resultado mensurável.</p>
+            </div>
+            <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+                <div class="glass glass-hover glass-glow feature-card text-center" data-reveal>
+                    <div class="icon-badge mx-auto"><i class="mdi mdi-shield-check-outline text-2xl"></i></div>
+                    <h3 class="card-title mt-4 text-sm font-semibold uppercase tracking-wide">Excelência</h3>
+                    <p class="card-text mt-2 text-xs">Padrões altos de qualidade do diagnóstico à entrega.</p>
+                </div>
+                <div class="glass glass-hover glass-glow feature-card text-center" data-reveal>
+                    <div class="icon-badge mx-auto"><i class="mdi mdi-eye-outline text-2xl"></i></div>
+                    <h3 class="card-title mt-4 text-sm font-semibold uppercase tracking-wide">Transparência</h3>
+                    <p class="card-text mt-2 text-xs">Comunicação clara, prazos realistas e governança.</p>
+                </div>
+                <div class="glass glass-hover glass-glow feature-card text-center" data-reveal>
+                    <div class="icon-badge mx-auto"><i class="mdi mdi-lightbulb-on-outline text-2xl"></i></div>
+                    <h3 class="card-title mt-4 text-sm font-semibold uppercase tracking-wide">Inovação</h3>
+                    <p class="card-text mt-2 text-xs">Tecnologia de ponta aplicada ao que importa.</p>
+                </div>
+                <div class="glass glass-hover glass-glow feature-card text-center" data-reveal>
+                    <div class="icon-badge mx-auto"><i class="mdi mdi-account-group-outline text-2xl"></i></div>
+                    <h3 class="card-title mt-4 text-sm font-semibold uppercase tracking-wide">Colaboração</h3>
+                    <p class="card-text mt-2 text-xs">Trabalhamos lado a lado com o seu time.</p>
+                </div>
+                <div class="glass glass-hover glass-glow feature-card text-center" data-reveal>
+                    <div class="icon-badge mx-auto"><i class="mdi mdi-autorenew text-2xl"></i></div>
+                    <h3 class="card-title mt-4 text-sm font-semibold uppercase tracking-wide">Adaptação</h3>
+                    <p class="card-text mt-2 text-xs">Soluções sob medida para cada contexto.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contato -->
-    <section id="contact" class="scroll-mt-24 py-16 md:py-20">
+    <section id="contact" class="scroll-mt-24 py-20 md:py-28">
         <div class="mx-auto max-w-6xl px-4">
-            <div class="mx-auto max-w-2xl text-center">
-                <h2  class="section-title">Fale conosco</h2>
-                <p class="mt-3 text-slate-600">Atendimento rápido direto pelo WhatsApp. Clique abaixo e conte sobre seu desafio.</p>
+            <div class="mx-auto max-w-2xl text-center" data-reveal>
+                <span class="eyebrow">Fale conosco</span>
+                <h2 class="section-title mt-5"><span class="title-gradient">Vamos construir juntos</span></h2>
+                <p class="lead mt-4">Atendimento rápido direto pelo WhatsApp. Clique abaixo e conte sobre seu desafio.</p>
             </div>
-            <div class="mx-auto mt-10 max-w-md rounded-lg bg-white p-8 shadow flex flex-col items-center gap-6">
+            <div class="glass mx-auto mt-12 max-w-md p-8 flex flex-col items-center gap-6 text-center" data-reveal>
+                <div class="icon-badge !h-14 !w-14"><i class="mdi mdi-whatsapp text-3xl"></i></div>
+                <p class="text-white/80">Resposta rápida em horário comercial. Conte sobre seu projeto e receba um orçamento.</p>
                 <a href="https://api.whatsapp.com/send?phone=5511963371980&text=Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20orcamento" target="_blank" rel="noopener" class="primary-btn text-base px-8 py-4"><i class="mdi mdi-whatsapp text-xl"></i> Abrir WhatsApp</a>
-                <p class="text-xs text-slate-500">Horário comercial • Resposta rápida</p>
+                <p class="text-xs muted">Horário comercial • Resposta rápida</p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gradient-to-r from-secondary to-primary py-12 text-center text-dark">
+    <footer class="relative border-t border-white/10 py-12 text-center text-white/80">
         <div class="mx-auto max-w-6xl px-4">
             <div class="flex flex-col items-center">
-                <div class="flex flex-col items-center text-2xl font-extrabold tracking-wide">EKATELOS
-                    <span class="text-xs tracking-[0.5em]">L T D A</span>
+                <div class="flex flex-col items-center font-display text-2xl font-bold tracking-wide text-white">EKATELOS
+                    <span class="text-xs tracking-[0.5em] text-primary">L T D A</span>
                 </div>
-                <div class="mt-6 flex flex-wrap items-center justify-center gap-4 text-sm text-dark">
-                    <a class="transition hover:underline" href="#about">Sobre</a>
-                    <a class="transition hover:underline" href="#services">Serviços</a>
-                    <a class="transition hover:underline" href="#specialties">Especialidades</a>
-                    <a class="transition hover:underline" href="#products">Produtos</a>
-                    <a class="transition hover:underline" href="#portfolio">Portfólio</a>
-                    <a class="transition hover:underline" href="#contact">Contato</a>
+                <div class="mt-6 flex flex-wrap items-center justify-center gap-5 text-sm text-white/70">
+                    <a class="transition hover:text-primary" href="#services">Serviços</a>
+                    <a class="transition hover:text-primary" href="#products">Produtos</a>
+                    <a class="transition hover:text-primary" href="#specialties">Especialidades</a>
+                    <a class="transition hover:text-primary" href="#portfolio">Portfólio</a>
+                    <a class="transition hover:text-primary" href="#about">Essência</a>
+                    <a class="transition hover:text-primary" href="#contact">Contato</a>
                 </div>
-                <div class="mt-8 w-full border-t border-white/30 pt-4 text-xs space-y-1">
+                <div class="mt-8 w-full border-t border-white/10 pt-4 text-xs space-y-1 text-white/50">
                     <div>&copy; 2025 Ekatelos LTDA. Todos os direitos reservados.</div>
                     <div>CNPJ: 45.643.037/0001-76</div>
                 </div>
@@ -471,13 +641,121 @@
     </footer>
 
     <script>
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        // Menu mobile
         const btn = document.getElementById('menuBtn');
         const menu = document.getElementById('mobileMenu');
+        const headerEl = document.getElementById('siteHeader');
         if (btn && menu) {
-            btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+            const setMenu = (open) => {
+                menu.classList.toggle('hidden', !open);
+                btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+                if (headerEl) headerEl.classList.toggle('menu-open', open); // fundo de vidro mesmo no topo
+            };
+            btn.addEventListener('click', () => setMenu(menu.classList.contains('hidden')));
+            menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
         }
 
-        // Especialidades dinâmicas (círculo externo com labels e bolinhas alinhadas)
+        // Header: estado "scrolled" (vidro)
+        (function() {
+            const header = document.getElementById('siteHeader');
+            if (!header) return;
+            const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 40);
+            onScroll();
+            window.addEventListener('scroll', onScroll, { passive: true });
+        })();
+
+        // Scroll reveal
+        (function() {
+            const els = document.querySelectorAll('[data-reveal]');
+            if (!('IntersectionObserver' in window) || reduceMotion) {
+                els.forEach(el => el.classList.add('in'));
+                return;
+            }
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach((entry, i) => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.transitionDelay = Math.min(i * 60, 240) + 'ms';
+                        entry.target.classList.add('in');
+                        io.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+            els.forEach(el => io.observe(el));
+        })();
+
+        // Onda animada lenta (substitui o globo de partículas)
+        (function() {
+            const canvas = document.getElementById('waveCanvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            let w = 0, h = 0;
+            const dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+            function resize() {
+                const r = canvas.parentElement.getBoundingClientRect();
+                w = r.width; h = r.height;
+                canvas.width = w * dpr; canvas.height = h * dpr;
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            }
+            resize();
+            window.addEventListener('resize', resize);
+
+            const LINES = 30;
+            function draw(t) {
+                ctx.clearRect(0, 0, w, h);
+                for (let i = 0; i < LINES; i++) {
+                    const p = i / (LINES - 1);
+                    const baseY = p * h;
+                    // banda larga -> ondas espalhadas por todo o fundo
+                    const band = Math.exp(-Math.pow((p - 0.5) / 0.55, 2));
+                    const amp = (h * 0.07) * band + 6;
+                    ctx.beginPath();
+                    for (let x = 0; x <= w; x += 7) {
+                        const xx = x / w;
+                        const y = baseY
+                            + Math.sin(xx * 6.0 + t * 0.00035 + i * 0.34) * amp
+                            + Math.sin(xx * 13.0 - t * 0.0005 + i * 0.2) * amp * 0.32;
+                        if (x === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+                    }
+                    const alpha = 0.06 + band * 0.34;
+                    ctx.strokeStyle = 'rgba(150,255,0,' + alpha.toFixed(3) + ')';
+                    ctx.lineWidth = 1.1;
+                    ctx.stroke();
+                }
+                if (!reduceMotion) requestAnimationFrame(draw);
+            }
+            if (reduceMotion) draw(0); else requestAnimationFrame(draw);
+        })();
+
+        // Serviços: stack isométrico (monta ao entrar na tela + sincroniza hover com a lista)
+        (function() {
+            const scene = document.getElementById('isoScene');
+            const list = document.getElementById('svcList');
+            if (!scene || !list) return;
+            const layers = Array.from(scene.querySelectorAll('.iso-layer'));
+            const items = Array.from(list.querySelectorAll('.svc-item'));
+
+            if ('IntersectionObserver' in window) {
+                const io = new IntersectionObserver((entries) => {
+                    entries.forEach(e => { if (e.isIntersecting) { scene.classList.add('in'); io.disconnect(); } });
+                }, { threshold: 0.25 });
+                io.observe(scene);
+            } else {
+                scene.classList.add('in');
+            }
+
+            function setActive(i) {
+                items.forEach((it, idx) => it.classList.toggle('active', idx === i));
+                layers.forEach((ly, idx) => ly.classList.toggle('active', idx === i));
+            }
+            items.forEach((it, i) => it.addEventListener('mouseenter', () => setActive(i)));
+            layers.forEach((ly, i) => ly.addEventListener('mouseenter', () => setActive(i)));
+            setActive(0);
+        })();
+
+        // Especialidades: círculo com labels e bolinhas posicionadas via JS
         (function() {
             const container = document.getElementById('specialtyContainer');
             if (!container) return;
@@ -492,28 +770,41 @@
                 'UI/UX',
                 'Segurança'
             ];
-            // Ângulos distribuídos uniformemente (em radianos). Começa no topo (-90°) e segue sentido horário
             const count = specialties.length;
-            const ring = container.querySelector('.specialty-ring');
+            const spokes = [];
             const ringRectObserver = new ResizeObserver(positionAll);
             ringRectObserver.observe(container);
 
+            function setActive(idx, on) {
+                const wrapper = container.querySelector('.specialty-wrapper[data-index="' + idx + '"]');
+                if (wrapper) wrapper.classList.toggle('active', on);
+                if (spokes[idx]) spokes[idx].classList.toggle('active', on);
+            }
+
             function createElements() {
                 specialties.forEach((name, idx) => {
+                    // raio do centro até a especialidade (atrás dos pontos)
+                    const spoke = document.createElement('div');
+                    spoke.className = 'specialty-spoke';
+                    container.appendChild(spoke);
+                    spokes[idx] = spoke;
+
                     const wrapper = document.createElement('div');
-                    wrapper.className = 'absolute flex items-center justify-center';
+                    wrapper.className = 'specialty-wrapper absolute flex items-center justify-center';
                     wrapper.dataset.index = idx;
 
                     const dot = document.createElement('span');
-                    dot.className = 'specialty-dot block rounded-full bg-primary shadow-glow';
+                    dot.className = 'specialty-dot block rounded-full';
+                    dot.style.setProperty('--rdelay', (idx / count * 2.6).toFixed(2) + 's');
 
                     const label = document.createElement('span');
                     label.textContent = name;
-                    // Removido fundo/borda; apenas texto limpo
-                    label.className = 'specialty-label whitespace-nowrap text-sm font-semibold tracking-wide text-slate-700';
+                    label.className = 'specialty-label whitespace-nowrap text-sm font-semibold tracking-wide';
 
                     wrapper.appendChild(dot);
                     wrapper.appendChild(label);
+                    wrapper.addEventListener('mouseenter', () => setActive(idx, true));
+                    wrapper.addEventListener('mouseleave', () => setActive(idx, false));
                     container.appendChild(wrapper);
                 });
             }
@@ -521,24 +812,40 @@
             function positionAll() {
                 const w = container.clientWidth;
                 const h = container.clientHeight;
-                const inset = 36; // corresponde a inset-9 (~36px) reduzindo o círculo
-                const radius = (Math.min(w, h) / 2) - inset; // raio da borda verde
+                const inset = 36;
+                const radius = (Math.min(w, h) / 2) - inset;
                 const centerX = w / 2;
                 const centerY = h / 2;
                 const isSmall = w < 420;
-                const dotRadius = isSmall ? 7 : 10; // bolinha menor em telas pequenas
-                const gapFromRing = isSmall ? 26 : 40; // aproxima em telas pequenas
-                const wrappers = container.querySelectorAll('[data-index]');
-                wrappers.forEach(wrapper => {
+                const dotRadius = isSmall ? 7 : 10;
+                const gapFromRing = isSmall ? 26 : 40;
+                const fontSize = isSmall ? '0.60rem' : '0.75rem';
+                const wrappers = Array.from(container.querySelectorAll('[data-index]'));
+                const labels = wrappers.map(wp => wp.querySelector('.specialty-label'));
+
+                // 1) Escrita: define o tamanho de fonte de todos os labels
+                labels.forEach(l => { l.style.fontSize = fontSize; });
+                // 2) Leitura em lote: mede todos de uma vez (evita reflow repetido / layout thrashing)
+                const sizes = labels.map(l => ({ lw: l.offsetWidth || 0, lh: l.offsetHeight || 0 }));
+
+                // 3) Escrita: posiciona tudo (sem mais leituras de layout)
+                wrappers.forEach((wrapper, i) => {
                     const idx = parseInt(wrapper.dataset.index, 10);
-                    // Ângulo em radianos: -90° (topo) + fração * 360° (sentido horário)
                     const angle = (-90 + (360 / count) * idx) * (Math.PI / 180);
                     const ringX = centerX + radius * Math.cos(angle);
                     const ringY = centerY + radius * Math.sin(angle);
 
+                    // posicionar o raio do centro até a bolinha
+                    const spoke = spokes[idx];
+                    if (spoke) {
+                        spoke.style.left = centerX + 'px';
+                        spoke.style.top = (centerY - 1) + 'px';
+                        spoke.style.width = radius + 'px';
+                        spoke.style.transform = 'rotate(' + (-90 + (360 / count) * idx) + 'deg)';
+                    }
+
                     const dot = wrapper.querySelector('.specialty-dot');
-                    const label = wrapper.querySelector('.specialty-label');
-                    // posicionar dot exatamente na borda
+                    const label = labels[i];
                     const dotLeft = ringX - dotRadius;
                     const dotTop = ringY - dotRadius;
                     dot.style.position = 'absolute';
@@ -546,216 +853,36 @@
                     dot.style.left = '0px';
                     dot.style.top = '0px';
 
-                    // Label: deslocar radialmente para fora
-                    const labelOffset = gapFromRing + dotRadius; // começa logo após a bolinha
-                    // Medir label para centralizar ao longo da tangente
-                    // Ajustar fonte em telas pequenas
-                    if (isSmall) {
-                        label.style.fontSize = '0.60rem';
-                    } else {
-                        label.style.fontSize = '0.75rem';
-                    }
-                    const lw = label.offsetWidth || 0;
-                    const lh = label.offsetHeight || 0;
-                    // Vetor radial
+                    const labelOffset = gapFromRing + dotRadius;
+                    const lw = sizes[i].lw;
+                    const lh = sizes[i].lh;
                     const vx = Math.cos(angle);
                     const vy = Math.sin(angle);
-                    // Posição base do centro da bolinha
                     const baseX = ringX + vx * labelOffset;
                     const baseY = ringY + vy * labelOffset;
-                    // Ajustar para centralizar label (meio da label coincide com a linha radial)
                     const labelLeft = baseX - lw / 2;
                     const labelTop = baseY - lh / 2;
 
-                    // Dimensão wrapper cobre label e dot
                     const wrapLeft = Math.min(dotLeft, labelLeft) - 2;
                     const wrapTop = Math.min(dotTop, labelTop) - 2;
                     const wrapRight = Math.max(dotLeft + dotRadius * 2, labelLeft + lw) + 2;
                     const wrapBottom = Math.max(dotTop + dotRadius * 2, labelTop + lh) + 2;
-                    const wrapW = wrapRight - wrapLeft;
-                    const wrapH = wrapBottom - wrapTop;
                     wrapper.style.left = wrapLeft + 'px';
                     wrapper.style.top = wrapTop + 'px';
-                    wrapper.style.width = wrapW + 'px';
-                    wrapper.style.height = wrapH + 'px';
+                    wrapper.style.width = (wrapRight - wrapLeft) + 'px';
+                    wrapper.style.height = (wrapBottom - wrapTop) + 'px';
 
-                    // Aplicar posições relativas dentro do wrapper
                     dot.style.transform = `translate(${dotLeft - wrapLeft}px, ${dotTop - wrapTop}px)`;
                     label.style.position = 'absolute';
                     label.style.left = (labelLeft - wrapLeft) + 'px';
                     label.style.top = (labelTop - wrapTop) + 'px';
-
-                    // Opcional: rotacionar label para acompanhar a curva (desativado para legibilidade)
-                    // label.style.transform = `rotate(${angle}rad)`;
                 });
             }
 
             createElements();
-            // Primeiro posicionamento após render
-            requestAnimationFrame(() => {
-                positionAll();
-            });
+            requestAnimationFrame(positionAll);
             window.addEventListener('resize', positionAll);
         })();
-
-            // Particle Globe
-            (function() {
-                const canvas = document.getElementById('particleGlobe');
-                if (!canvas) return;
-                const ctx = canvas.getContext('2d');
-
-                let width = 0, height = 0, size = 100, radius = 0;
-                const DPR = window.devicePixelRatio || 1;
-                const PARTICLE_COUNT = 720; // mais pontos, porém mais espalhados no volume
-                const BASE_COLOR = { r: 150, g: 255, b: 0 };
-                const particles = [];
-                let angleY = 0;
-                let lastTime = 0;
-                const ROT_SPEED = 0.22; // levemente mais lento por ter mais pontos
-                let mouse = { x: 0, y: 0, inside: false };
-
-                function resize() {
-                    const rect = canvas.parentElement.getBoundingClientRect();
-                    width = rect.width;
-                    height = rect.height;
-                    size = Math.min(width, height);
-                    radius = size * 1.2; // maior
-                    canvas.width = width * DPR;
-                    canvas.height = height * DPR;
-                    canvas.style.width = width + 'px';
-                    canvas.style.height = height + 'px';
-                    ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
-                }
-
-                // Distribuição quase uniforme na esfera usando espiral dourada
-                function generate() {
-                    particles.length = 0;
-                    const phi = Math.PI * (3 - Math.sqrt(5)); // ângulo dourado
-                    for (let i = 0; i < PARTICLE_COUNT; i++) {
-                        const yBase = 1 - (i / (PARTICLE_COUNT - 1)) * 2; // de 1 a -1 (casca)
-                        const radiusXZBase = Math.sqrt(1 - yBase * yBase);
-                        const theta = phi * i;
-                        let x = Math.cos(theta) * radiusXZBase;
-                        let z = Math.sin(theta) * radiusXZBase;
-                        let y = yBase;
-                        // Espalhar no volume: aplicar escala radial aleatória (tendendo à superfície)
-                        const shell = 0.65 + Math.random() * 0.35; // 0.65 a 1
-                        x *= shell; y *= shell; z *= shell;
-                        // Pequena perturbação para quebrar alinhamento
-                        x += (Math.random() - 0.5) * 0.03;
-                        y += (Math.random() - 0.5) * 0.03;
-                        z += (Math.random() - 0.5) * 0.03;
-                        particles.push({ x, y, z });
-                    }
-                }
-
-                function project(px, py, pz) {
-                    // rotação em torno do eixo Y
-                    const cosY = Math.cos(angleY); const sinY = Math.sin(angleY);
-                    const rx = px * cosY + pz * sinY;
-                    const rz = -px * sinY + pz * cosY;
-                    const ry = py; // sem rotação X para manter leitura
-
-                    const camDist = 3.2; // distância da câmera
-                    const f = 1 / (camDist - rz); // fator de perspectiva simples
-                    const sx = rx * f * radius + width / 2;
-                    const sy = ry * f * radius + height / 2;
-                    const depth = rz; // para ordenação
-                    return { sx, sy, depth };
-                }
-
-                function ease(current, target, factor) {
-                    return current + (target - current) * factor;
-                }
-
-                function draw(time) {
-                    const dt = (time - lastTime) / 1000 || 0;
-                    lastTime = time;
-                    angleY += ROT_SPEED * dt;
-
-                    ctx.clearRect(0, 0, width, height);
-
-                    const projected = particles.map(p => {
-                        const pr = project(p.x, p.y, p.z);
-                        return { ...p, ...pr };
-                    });
-
-                    // Ordenar por profundidade para desenhar de trás para frente
-                    projected.sort((a, b) => a.depth - b.depth);
-
-                    const mouseInfluenceRadius = radius * 0.60;
-                    const now = performance.now();
-
-                    for (const p of projected) {
-                        let dx = 0, dy = 0;
-                        if (mouse.inside) {
-                            const mx = mouse.x;
-                            const my = mouse.y;
-                            const mdx = p.sx - mx;
-                            const mdy = p.sy - my;
-                            const dist = Math.hypot(mdx, mdy);
-                            if (dist < mouseInfluenceRadius) {
-                                const force = (1 - dist / mouseInfluenceRadius);
-                                const repulse = force * force * 22; // intensidade
-                                const inv = 1 / (dist || 1);
-                                dx = mdx * inv * repulse;
-                                dy = mdy * inv * repulse;
-                            }
-                        }
-
-                        const sizeFactor = (1 - (p.depth + 1) / 2); // depth ~ [-1,1]
-                        const r = 1.0 + sizeFactor * 2.4; // raio do ponto ajustado
-                        const alpha = 0.30 + sizeFactor * 0.70; // contraste
-                        const flicker = 0.92 + Math.sin((now / 120) + p.x * 10) * 0.05;
-                        const finalAlpha = alpha * flicker;
-                        ctx.beginPath();
-                        ctx.fillStyle = `rgba(${BASE_COLOR.r},${BASE_COLOR.g},${BASE_COLOR.b},${finalAlpha.toFixed(3)})`;
-                        ctx.arc(p.sx + dx, p.sy + dy, r, 0, Math.PI * 2);
-                        ctx.fill();
-                    }
-
-                    requestAnimationFrame(draw);
-                }
-
-                function onPointer(e) {
-                    const rect = canvas.getBoundingClientRect();
-                    const x = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
-                    const y = (e.touches ? e.touches[0].clientY : e.clientY) - rect.top;
-                    mouse.x = x; mouse.y = y; mouse.inside = true;
-                }
-                function onLeave() { mouse.inside = false; }
-
-                window.addEventListener('resize', () => { resize(); });
-                canvas.addEventListener('mousemove', onPointer);
-                canvas.addEventListener('touchmove', onPointer, { passive: true });
-                canvas.addEventListener('mouseleave', onLeave);
-                canvas.addEventListener('touchend', onLeave);
-
-                resize();
-                generate();
-                requestAnimationFrame(draw);
-            })();
-
-            // Header background change after leaving hero
-            (function() {
-                const header = document.getElementById('siteHeader');
-                const hero = document.getElementById('hero');
-                if (!header || !hero) return;
-                header.classList.add('bg-transparent');
-                const darkClasses = ['bg-[#050b11]/90','backdrop-blur','backdrop-saturate-150'];
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            darkClasses.forEach(c => header.classList.remove(c));
-                            header.classList.add('bg-transparent');
-                        } else {
-                            header.classList.remove('bg-transparent');
-                            darkClasses.forEach(c => header.classList.add(c));
-                        }
-                    });
-                }, { threshold: 0.25 });
-                observer.observe(hero);
-            })();
     </script>
 </body>
 </html>
