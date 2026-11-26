@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EKATELOS — Consultoria, desenvolvimento e produtos SaaS sob medida</title>
+    <title>EKATELOS | Consultoria, desenvolvimento e produtos SaaS sob medida</title>
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/logo-ekatelos.png" />
     <link rel="shortcut icon" href="./assets/logo-ekatelos.png" />
@@ -17,14 +17,14 @@
     <meta property="og:site_name" content="EKATELOS" />
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:url" content="https://ekatelos.com/" />
-    <meta property="og:title" content="EKATELOS — Tecnologia que impulsiona negócios" />
+    <meta property="og:title" content="EKATELOS | Tecnologia que impulsiona negócios" />
     <meta property="og:description" content="Consultoria, desenvolvimento e produtos SaaS sob medida. Do planejamento à operação, com transparência e foco em resultado." />
     <meta property="og:image" content="https://ekatelos.com/assets/logo-ekatelos.png" />
     <meta property="og:image:alt" content="EKATELOS" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="EKATELOS — Tecnologia que impulsiona negócios" />
+    <meta name="twitter:title" content="EKATELOS | Tecnologia que impulsiona negócios" />
     <meta name="twitter:description" content="Consultoria, desenvolvimento e produtos SaaS sob medida, com transparência e foco em resultado." />
     <meta name="twitter:image" content="https://ekatelos.com/assets/logo-ekatelos.png" />
 
@@ -41,7 +41,7 @@
         "taxID": "45.643.037/0001-76",
         "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+55-11-96337-1980",
+            "telephone": "+55-11-4863-4645",
             "contactType": "sales",
             "areaServed": "BR",
             "availableLanguage": ["Portuguese"]
@@ -190,6 +190,8 @@
         @keyframes scrollDot{ 0%{ opacity:0; transform:translateY(0); } 30%{ opacity:1; } 60%{ opacity:1; transform:translateY(10px); } 100%{ opacity:0; transform:translateY(12px); } }
         /* foco visível para teclado */
         a:focus-visible, button:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; border-radius:8px; }
+        .svc-item:focus{ outline:none; }
+        .svc-item:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
 
         /* ===== Cards genéricos (glass) ===== */
         .feature-card{ padding:1.5rem; text-align:left; }
@@ -202,7 +204,7 @@
         .svc-layout{ display:grid; gap:3rem; align-items:center; margin-top:3.5rem; }
         @media (min-width:1024px){ .svc-layout{ grid-template-columns:1fr 1fr; gap:1rem; } }
         .svc-list{ display:flex; flex-direction:column; gap:.35rem; }
-        .svc-item{ position:relative; display:flex; gap:1rem; padding:.95rem 1.1rem; border-radius:1rem; cursor:default;
+        .svc-item{ position:relative; display:flex; gap:1rem; padding:.95rem 1.1rem; border-radius:1rem; cursor:pointer;
             border:1px solid transparent; transition:background .4s, border-color .4s; }
         .svc-item:hover, .svc-item.active{ background:rgba(255,255,255,0.04); border-color:rgba(150,255,0,0.25); }
         .svc-item::before{ content:""; position:absolute; left:0; top:50%; height:0; width:3px; border-radius:3px; background:var(--primary); transform:translateY(-50%); transition:height .4s; box-shadow:0 0 12px rgba(150,255,0,.6); }
@@ -211,47 +213,178 @@
         .svc-item h4{ font-size:1.02rem; font-weight:600; color:#fff; letter-spacing:-0.01em; }
         .svc-item p{ margin-top:.25rem; font-size:.82rem; line-height:1.2rem; color:rgba(255,255,255,0.72); }
 
-        .iso-scene{ position:relative; height:440px; perspective:1300px; }
-        .iso-stack{ position:absolute; inset:0; transform-style:preserve-3d; transform:rotateX(56deg) rotateZ(-45deg); }
-        .iso-layer{ position:absolute; top:50%; left:50%; width:46%; aspect-ratio:1/1;
-            transform:translate(-50%,-50%) translateZ(var(--zs,0));
-            opacity:0; transition:transform 1s cubic-bezier(.2,.8,.2,1), opacity 1s; }
-        .iso-scene.in .iso-layer{ opacity:1; transform:translate(-50%,-50%) translateZ(var(--zr,0)); }
-        .iso-face{ position:absolute; inset:0; border-radius:8px;
-            background:linear-gradient(135deg, rgba(150,255,0,0.10), rgba(255,255,255,0.02));
-            border:1px solid rgba(150,255,0,0.22);
-            box-shadow:0 2px 0 rgba(8,16,0,.5),0 4px 0 rgba(8,16,0,.45),0 6px 0 rgba(8,16,0,.4),0 8px 0 rgba(8,16,0,.35),0 10px 0 rgba(8,16,0,.3),0 12px 0 rgba(8,16,0,.25),0 14px 0 rgba(8,16,0,.2),0 50px 60px -25px rgba(0,0,0,.85);
-            transition:transform .45s, border-color .45s, box-shadow .45s, background .45s; }
-        .iso-layer.active .iso-face{ transform:scale(1.06); border-color:var(--primary);
-            background:linear-gradient(135deg, rgba(150,255,0,0.24), rgba(150,255,0,0.05));
-            box-shadow:0 2px 0 rgba(8,16,0,.5),0 4px 0 rgba(8,16,0,.45),0 6px 0 rgba(8,16,0,.4),0 8px 0 rgba(8,16,0,.35),0 10px 0 rgba(8,16,0,.3),0 12px 0 rgba(8,16,0,.25),0 14px 0 rgba(8,16,0,.2),0 0 45px rgba(150,255,0,.4),0 50px 60px -25px rgba(0,0,0,.85); }
-        .iso-logo-img{ position:absolute; top:50%; left:50%; width:40%; transform:translate(-50%,-50%); opacity:.85; filter:drop-shadow(0 0 12px rgba(150,255,0,.45)); pointer-events:none; }
-        @media (max-width:520px){ .iso-scene{ height:320px; } .iso-stack{ transform:rotateX(56deg) rotateZ(-45deg) scale(.78); } }
+        /* Projeção ortográfica (sem perspective): todas as placas têm o mesmo tamanho.
+           A pilha nasce fechada na base e sobe camada a camada (--i: 0 = base, 4 = topo). */
+        .iso-scene{ position:relative; height:460px; --gap:62px; }
+        /* quadrado de 70% da cena: girado em 45°, ocupa 99% da largura e não estoura a tela no celular */
+        .iso-stack{ position:absolute; top:50%; left:50%; width:70%; aspect-ratio:1/1; transform-style:preserve-3d; transform:translate(-50%,-50%) rotateX(58deg) rotateZ(-45deg); }
+        .iso-layer{ position:absolute; top:50%; left:50%; width:66%; aspect-ratio:1/1; cursor:pointer;
+            --z:calc((var(--i) - 2) * var(--gap));
+            transform:translate(-50%,-50%) translateZ(calc(-2 * var(--gap)));
+            opacity:0; transition:transform .9s cubic-bezier(.2,.8,.2,1), opacity .45s ease; transition-delay:calc(var(--i) * .13s); }
+        .iso-scene.in .iso-layer{ opacity:1; transform:translate(-50%,-50%) translateZ(var(--z)); }
+        /* depois da entrada: sem atraso, para o destaque responder na hora */
+        .iso-scene.ready .iso-layer{ transition-duration:.45s; transition-delay:0s; }
+        .iso-scene.in .iso-layer.active{ transform:translate(-50%,-50%) translateZ(calc(var(--z) + 14px)); }
+        /* placa opaca: a de baixo não vaza por trás da de cima. A sombra em (-n, n) vira espessura vertical na tela. */
+        .iso-face{ position:absolute; inset:0; border-radius:10px;
+            background:linear-gradient(135deg, #1b2b0d 0%, #0e1511 55%, #0a0f0d 100%);
+            border:1px solid rgba(150,255,0,0.30);
+            box-shadow:-1px 1px 0 #24400a,-2px 2px 0 #213a09,-3px 3px 0 #1d3408,-4px 4px 0 #192d07,-5px 5px 0 #152606,-6px 6px 0 #111f05,-7px 7px 0 #0d1804,-26px 26px 38px rgba(0,0,0,.55);
+            transition:border-color .45s, box-shadow .45s, background .45s; }
+        .iso-layer.active .iso-face{ border-color:var(--primary);
+            background:linear-gradient(135deg, #4a7d06 0%, #24400a 55%, #152606 100%);
+            box-shadow:-1px 1px 0 #5a9a00,-2px 2px 0 #518b00,-3px 3px 0 #487c00,-4px 4px 0 #3f6d00,-5px 5px 0 #365e00,-6px 6px 0 #2d4f00,-7px 7px 0 #244000,0 0 46px rgba(150,255,0,.45),-26px 26px 38px rgba(0,0,0,.55); }
+        .iso-label{ position:absolute; left:16px; bottom:11px; display:flex; align-items:baseline; gap:.55rem; white-space:nowrap; pointer-events:none;
+            font-family:'Space Grotesk'; font-weight:700; font-size:.8rem; letter-spacing:.16em; text-transform:uppercase; color:rgba(184,255,77,0.62); transition:color .45s; }
+        .iso-label b{ color:rgba(255,255,255,0.9); }
+        .iso-layer.active .iso-label{ color:#eaffc8; }
+        .iso-logo-img{ position:absolute; top:46%; left:54%; width:38%; transform:translate(-50%,-50%); opacity:.95; filter:drop-shadow(0 0 12px rgba(150,255,0,.45)); pointer-events:none; }
+        @media (max-width:520px){ .iso-scene{ height:330px; --gap:48px; } .iso-layer{ width:82%; } .iso-label{ left:12px; bottom:9px; } .iso-label span{ display:none; } }
 
         .badge{ background:rgba(150,255,0,0.10); color:var(--accent); font-size:.6rem; font-weight:600; letter-spacing:.08em; padding:.35rem .55rem; border-radius:.5rem; border:1px solid rgba(150,255,0,0.22); text-transform:uppercase; }
 
-        /* ===== Produtos ===== */
-        .product-grid{ display:grid; gap:1.25rem; }
-        @media (min-width:768px){ .product-grid{ grid-template-columns:repeat(3,1fr); } }
-        .product-card{ display:flex; flex-direction:column; padding:2.25rem 2.1rem; min-height:30rem; }
-        .product-top{ display:flex; align-items:flex-start; justify-content:space-between; gap:1rem; }
-        .product-num{ font-family:'Space Grotesk'; font-weight:700; line-height:.8; font-size:clamp(6rem,13vw,9.5rem);
-            color:transparent; -webkit-text-stroke:2.5px rgba(150,255,0,0.6); filter:drop-shadow(0 0 26px rgba(150,255,0,0.18)); transition:.45s; user-select:none; }
-        .product-card:hover .product-num{ -webkit-text-stroke-color:var(--primary); filter:drop-shadow(0 0 32px rgba(150,255,0,0.45)); }
-        .product-name{ margin-top:.85rem; font-size:1.55rem; font-weight:600; letter-spacing:-0.02em; color:#fff; }
-        .product-tagline{ margin-top:.35rem; font-size:.86rem; line-height:1.4rem; color:rgba(255,255,255,0.74); }
-        .product-badge{ background:rgba(150,255,0,0.10); color:var(--accent); font-size:.62rem; letter-spacing:.06em; font-weight:600; padding:.4rem .6rem; border-radius:0.6rem; text-transform:uppercase; border:1px solid rgba(150,255,0,0.25); white-space:nowrap; }
-        .product-link{ margin-top:1.25rem; align-self:flex-start; display:inline-flex; align-items:center; gap:.5rem;
+        /* ===== Blocos compartilhados (Produtos e Portfólio) ===== */
+        .kicker{ display:flex; align-items:center; gap:.75rem; }
+        .kicker .icon-badge{ height:2.6rem; width:2.6rem; border-radius:.8rem; flex:none; }
+        .kicker-text{ font-size:.7rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--accent); }
+        .feat-grid{ margin-top:1.4rem; display:grid; gap:1rem 1.5rem; }
+        @media (min-width:640px){ .feat-grid{ grid-template-columns:1fr 1fr; } }
+        .feat{ position:relative; padding-left:1.9rem; }
+        .feat > .mdi{ position:absolute; left:0; top:-2px; font-size:1.2rem; color:var(--primary); }
+        .feat h4{ font-size:.9rem; font-weight:600; color:#fff; }
+        .feat p{ margin-top:.15rem; font-size:.8rem; line-height:1.25rem; color:rgba(255,255,255,0.7); }
+        .pill-link{ display:inline-flex; align-items:center; gap:.5rem;
             font-size:.8rem; font-weight:600; letter-spacing:.03em; color:#0a1500; background:linear-gradient(100deg,var(--secondary),var(--primary));
             padding:.65rem 1.15rem; border-radius:999px; box-shadow:0 8px 24px rgba(150,255,0,0.25); transition:.35s; }
-        .product-link:hover{ transform:translateY(-2px); box-shadow:0 12px 30px rgba(150,255,0,0.42); }
-        .product-link .mdi{ transition:transform .35s; }
-        .product-link:hover .mdi{ transform:translate(2px,-2px); }
-        .feature-list{ margin-top:1rem; display:grid; gap:.5rem; font-size:.82rem; line-height:1.3rem; }
-        .feature-item{ position:relative; padding-left:1.5rem; color:rgba(255,255,255,0.72); }
-        .feature-item .mdi{ position:absolute; left:0; top:1px; font-size:1rem; color:var(--primary); }
-        .product-meta{ margin-top:auto; padding-top:1rem; display:flex; flex-wrap:wrap; gap:.4rem; }
-        .tag{ background:rgba(255,255,255,0.06); color:rgba(255,255,255,0.82); font-size:.66rem; font-weight:500; padding:.35rem .6rem; border-radius:.5rem; border:1px solid rgba(255,255,255,0.12); letter-spacing:.04em; }
+        .pill-link:hover{ transform:translateY(-2px); box-shadow:0 12px 30px rgba(150,255,0,0.42); }
+        .pill-link .mdi{ transition:transform .35s; }
+        .pill-link:hover .mdi{ transform:translate(2px,-2px); }
+
+        /* ===== Produtos (vitrine: texto de um lado, prévia do produto do outro) ===== */
+        .prod-list{ display:grid; gap:1.5rem; }
+        .prod-row{ display:grid; grid-template-columns:minmax(0,1fr); gap:1.75rem; padding:1.5rem; scroll-margin-top:6.5rem; }
+        @media (min-width:1024px){
+            .prod-row{ grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr); gap:3rem; padding:2.75rem; align-items:center; }
+            .prod-row:nth-child(even) .prod-visual{ order:-1; }
+        }
+        .prod-name{ margin-top:1rem; font-size:2rem; font-weight:700; letter-spacing:-0.02em; line-height:1.1; color:#fff; }
+        .prod-pitch{ margin-top:.6rem; font-size:1.02rem; line-height:1.6; color:rgba(255,255,255,0.84); }
+        .prod-for{ margin-top:.9rem; padding-left:.9rem; border-left:2px solid rgba(150,255,0,0.45); font-size:.85rem; line-height:1.5; color:rgba(255,255,255,0.7); }
+        .prod-for b{ color:var(--accent); font-weight:600; }
+        .prod-cta{ margin-top:1.7rem; }
+
+        /* prévias ilustrativas (janela de aplicativo) */
+        .mock{ border-radius:1rem; overflow:hidden; font-size:.78rem; border:1px solid rgba(255,255,255,0.10); background:rgba(6,9,12,0.80);
+            box-shadow:0 30px 60px -30px rgba(0,0,0,0.9), inset 0 1px 0 rgba(255,255,255,0.06); }
+        .mock-bar{ display:flex; align-items:center; gap:.6rem; padding:.6rem .85rem; border-bottom:1px solid rgba(255,255,255,0.07); background:rgba(255,255,255,0.03);
+            font-size:.68rem; letter-spacing:.04em; color:rgba(255,255,255,0.55); }
+        .mock-dots{ display:flex; gap:.3rem; }
+        .mock-dots b{ width:.5rem; height:.5rem; border-radius:50%; background:rgba(255,255,255,0.16); }
+        .mock-live{ margin-left:auto; display:inline-flex; align-items:center; gap:.35rem; color:var(--accent); font-weight:600; }
+        .mock-live::before{ content:""; width:.4rem; height:.4rem; border-radius:50%; background:var(--primary); box-shadow:0 0 8px rgba(150,255,0,0.9); }
+        .mock-body{ padding:1rem; display:grid; gap:.6rem; }
+        .mock-note{ justify-self:center; display:inline-flex; align-items:center; gap:.35rem; padding:.3rem .7rem; border-radius:999px; font-size:.68rem;
+            background:rgba(255,255,255,0.05); border:1px dashed rgba(255,255,255,0.16); color:rgba(255,255,255,0.62); }
+        .mock-note .mdi{ color:var(--primary); font-size:.85rem; }
+        /* conversa */
+        .chat-in, .chat-out{ max-width:84%; padding:.55rem .75rem; border-radius:.9rem; line-height:1.35; }
+        .chat-in{ justify-self:start; background:rgba(255,255,255,0.07); color:rgba(255,255,255,0.88); border-bottom-left-radius:.3rem; }
+        .chat-out{ justify-self:end; background:rgba(150,255,0,0.13); border:1px solid rgba(150,255,0,0.22); color:#eaffd0; border-bottom-right-radius:.3rem; }
+        .chat-who{ display:block; margin-bottom:.15rem; font-size:.6rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); }
+        .chat-replies{ justify-self:end; display:flex; flex-wrap:wrap; justify-content:flex-end; gap:.35rem; }
+        .chat-replies span{ padding:.3rem .65rem; border-radius:999px; border:1px solid rgba(150,255,0,0.35); color:var(--accent); font-size:.7rem; font-weight:500; }
+        /* fila / agenda */
+        .mock-row{ display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:.75rem; padding:.6rem .7rem; border-radius:.7rem;
+            background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.06); }
+        .mock-row time{ font-family:'Space Grotesk'; font-weight:700; font-size:.74rem; color:var(--accent); }
+        .mock-row strong, .mock-ticket strong, .mock-step strong{ display:block; font-size:.8rem; font-weight:600; color:#fff; }
+        .mock-row small, .mock-ticket small, .mock-step small{ font-size:.68rem; color:rgba(255,255,255,0.56); }
+        .pill{ padding:.22rem .55rem; border-radius:999px; font-size:.64rem; font-weight:600; white-space:nowrap;
+            background:rgba(255,255,255,0.07); color:rgba(255,255,255,0.72); border:1px solid rgba(255,255,255,0.10); }
+        .pill.live{ background:rgba(150,255,0,0.14); color:var(--accent); border-color:rgba(150,255,0,0.30); }
+        /* linha do tempo do chamado */
+        .mock-ticket{ padding:.7rem .8rem; border-radius:.7rem; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.06); }
+        .mock-steps{ padding:.3rem .2rem 0; }
+        .mock-step{ position:relative; padding:0 0 .8rem 1.6rem; }
+        .mock-step:last-child{ padding-bottom:.1rem; }
+        .mock-step::before{ content:""; position:absolute; left:.2rem; top:.28rem; width:.6rem; height:.6rem; border-radius:50%; border:2px solid rgba(255,255,255,0.28); background:#0a0e11; z-index:1; }
+        .mock-step::after{ content:""; position:absolute; left:.46rem; top:.9rem; bottom:-.2rem; width:2px; background:rgba(255,255,255,0.10); }
+        .mock-step:last-child::after{ display:none; }
+        .mock-step.done::before{ background:var(--primary); border-color:var(--primary); }
+        .mock-step.done::after{ background:rgba(150,255,0,0.45); }
+        .mock-step.now::before{ border-color:var(--primary); box-shadow:0 0 0 4px rgba(150,255,0,0.16); }
+        .mock-step:not(.done):not(.now) strong{ color:rgba(255,255,255,0.6); }
+
+        /* ===== Portfólio (um case em destaque, duas histórias e os demais setores) ===== */
+        .case-hero{ display:grid; grid-template-columns:minmax(0,1fr); gap:2rem; padding:1.5rem; }
+        @media (min-width:1024px){ .case-hero{ grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr); gap:2.5rem 3rem; padding:2.75rem; align-items:center; } }
+        .case-title{ margin-top:1rem; font-size:1.6rem; font-weight:700; letter-spacing:-0.02em; line-height:1.15; color:#fff; }
+        @media (min-width:768px){ .case-title{ font-size:1.9rem; } }
+        .case-story{ margin-top:.8rem; font-size:.98rem; line-height:1.65; color:rgba(255,255,255,0.8); }
+        .case-story strong{ color:#fff; font-weight:600; }
+        .case-story a{ color:var(--accent); font-weight:600; text-decoration:underline; text-underline-offset:3px; text-decoration-color:rgba(150,255,0,0.4); transition:color .3s; }
+        .case-story a:hover{ color:var(--primary); }
+        .case-wide{ grid-column:1 / -1; }
+        .proof-grid{ display:grid; gap:.9rem; }
+        @media (min-width:768px){ .proof-grid{ grid-template-columns:repeat(3,1fr); } }
+        .proof{ display:flex; gap:.85rem; padding:1rem 1.1rem; border-radius:1rem; background:rgba(150,255,0,0.05); border:1px solid rgba(150,255,0,0.20); }
+        .proof > .mdi{ font-size:1.5rem; line-height:1; color:var(--primary); }
+        .proof strong{ display:block; font-size:.95rem; font-weight:600; color:#fff; }
+        .proof span{ display:block; margin-top:.15rem; font-size:.78rem; line-height:1.2rem; color:rgba(255,255,255,0.7); }
+        /* display de bordo ilustrativo */
+        .helm{ border-radius:1.4rem; padding:.7rem; background:linear-gradient(160deg,#1c2126,#0b0d10); border:1px solid rgba(255,255,255,0.12);
+            box-shadow:0 40px 70px -35px rgba(0,0,0,0.95), inset 0 1px 0 rgba(255,255,255,0.12); }
+        .helm-screen{ border-radius:.9rem; overflow:hidden; border:1px solid rgba(150,255,0,0.16);
+            background:radial-gradient(120% 90% at 0% 0%, rgba(150,255,0,0.10), transparent 55%), #05080b; }
+        .helm-bar{ display:flex; align-items:center; justify-content:space-between; gap:.75rem; padding:.65rem .9rem; border-bottom:1px solid rgba(255,255,255,0.07);
+            font-size:.64rem; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,0.55); }
+        .helm-bar b{ font-family:'Space Grotesk'; letter-spacing:.24em; color:var(--primary); }
+        .helm-grid{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.6rem; padding:.9rem; }
+        .helm-btn{ display:grid; grid-template-columns:auto 1fr; align-items:center; gap:.1rem .65rem; padding:.7rem .8rem; border-radius:.8rem;
+            background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.09); }
+        .helm-btn .mdi{ grid-row:span 2; font-size:1.45rem; line-height:1; color:rgba(255,255,255,0.42); }
+        .helm-btn span{ font-size:.74rem; line-height:1.2; color:rgba(255,255,255,0.82); }
+        .helm-btn b{ font-family:'Space Grotesk'; font-size:.64rem; letter-spacing:.14em; color:rgba(255,255,255,0.4); }
+        .helm-btn.on{ background:rgba(150,255,0,0.10); border-color:rgba(150,255,0,0.42); box-shadow:0 0 22px -6px rgba(150,255,0,0.5); }
+        .helm-btn.on .mdi, .helm-btn.on b{ color:var(--primary); }
+        .helm-gauges{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.6rem; padding:0 .9rem .9rem; }
+        .helm-gauge{ padding:.65rem .7rem; border-radius:.8rem; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.07); }
+        .helm-gauge small{ display:block; font-size:.6rem; letter-spacing:.08em; text-transform:uppercase; color:rgba(255,255,255,0.5); }
+        .helm-gauge strong{ font-family:'Space Grotesk'; font-size:1.15rem; color:#fff; }
+        .helm-gauge i{ position:relative; display:block; margin-top:.4rem; height:4px; border-radius:4px; background:rgba(255,255,255,0.10); overflow:hidden; }
+        .helm-gauge i::after{ content:""; position:absolute; inset:0 auto 0 0; width:var(--v,50%); border-radius:4px; background:linear-gradient(90deg,var(--secondary),var(--primary)); }
+        @media (max-width:420px){ .helm-btn{ grid-template-columns:minmax(0,1fr); gap:.3rem; } .helm-btn .mdi{ grid-row:auto; } .helm-gauge{ padding:.6rem .55rem; } .helm-gauge strong{ font-size:1rem; } }
+        .helm-caption{ margin-top:.8rem; text-align:center; font-size:.72rem; color:rgba(255,255,255,0.5); }
+        /* galeria de embarcações (só aparece quando houver fotos em BOATS, no script) */
+        .boat-title{ font-size:.7rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--accent); }
+        .boat-track{ margin-top:.8rem; display:grid; grid-auto-flow:column; grid-auto-columns:minmax(230px,1fr); gap:.9rem; overflow-x:auto; scroll-snap-type:x mandatory; padding-bottom:.4rem; }
+        .boat{ position:relative; margin:0; aspect-ratio:4 / 3; border-radius:1rem; overflow:hidden; scroll-snap-align:start; border:1px solid rgba(255,255,255,0.10); background:#0b0f12; }
+        .boat img{ width:100%; height:100%; object-fit:cover; display:block; }
+        .boat figcaption{ position:absolute; inset:auto 0 0 0; padding:1.8rem .9rem .7rem; background:linear-gradient(180deg, transparent, rgba(5,7,10,0.92)); }
+        .boat figcaption strong{ display:block; font-size:.9rem; color:#fff; }
+        .boat figcaption span{ font-size:.74rem; color:rgba(255,255,255,0.72); }
+        /* histórias */
+        .case-card{ display:flex; flex-direction:column; padding:1.5rem; }
+        @media (min-width:1024px){ .case-card{ padding:2.25rem; } }
+        .case-card .case-title{ font-size:1.35rem; }
+        @media (min-width:768px){ .case-card .case-title{ font-size:1.5rem; } }
+        .journey{ margin-top:auto; padding-top:1.8rem; display:flex; flex-wrap:wrap; gap:.45rem; }
+        .journey-step{ display:inline-flex; align-items:center; gap:.4rem; padding:.45rem .7rem; border-radius:.7rem; font-size:.76rem; font-weight:500;
+            background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.10); color:rgba(255,255,255,0.9); }
+        .journey-step .mdi{ font-size:1rem; line-height:1; color:var(--primary); }
+        .journey-step:not(:last-child)::after{ content:"\203A"; margin-left:.25rem; color:rgba(150,255,0,0.6); }
+        @media (min-width:520px){
+            .journey{ display:grid; grid-template-columns:repeat(5,1fr); gap:0; }
+            .journey-step{ position:relative; flex-direction:column; gap:.55rem; padding:0; border:0; border-radius:0; background:none; text-align:center; font-size:.74rem; color:rgba(255,255,255,0.82); }
+            .journey-step .mdi{ position:relative; z-index:1; display:grid; place-items:center; width:2.6rem; height:2.6rem; border-radius:50%; font-size:1.15rem;
+                background:#0e1511; border:1px solid rgba(150,255,0,0.38); box-shadow:0 0 18px -6px rgba(150,255,0,0.55); }
+            .journey-step:not(:last-child)::after{ content:""; position:absolute; top:1.3rem; left:calc(50% + 1.3rem); width:calc(100% - 2.6rem); height:1px; margin:0;
+                background:linear-gradient(90deg, rgba(150,255,0,0.55), rgba(150,255,0,0.18)); }
+        }
+        .sector-label{ margin-top:3.5rem; text-align:center; font-size:.72rem; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:rgba(255,255,255,0.55); }
+        .sector-card{ display:flex; gap:1rem; padding:1.25rem; }
+        .sector-card .icon-badge{ flex:none; height:2.6rem; width:2.6rem; border-radius:.8rem; }
 
         /* ===== Especialidades (círculo) ===== */
         .specialty-ring{ border:1px solid rgba(150,255,0,0.28); box-shadow:0 0 40px rgba(150,255,0,0.10), inset 0 0 50px rgba(150,255,0,0.05); }
@@ -309,7 +442,7 @@
     <header id="siteHeader" class="site-header fixed inset-x-0 top-0 z-50 text-white">
         <div class="mx-auto max-w-6xl px-4">
             <div class="flex items-center justify-between py-4">
-                <a href="#hero" class="flex items-center" aria-label="EKATELOS — início">
+                <a href="#hero" class="flex items-center" aria-label="EKATELOS, início">
                     <img src="./assets/logo-ekatelos.png" alt="EKATELOS" class="h-10 w-auto select-none" fetchpriority="high" decoding="async" />
                 </a>
                 <nav class="hidden md:block">
@@ -367,40 +500,41 @@
                 <div data-reveal>
                     <span class="eyebrow">Serviços</span>
                     <h2 class="section-title mt-5"><span class="title-gradient">Engenharia focada em valor</span></h2>
-                    <p class="lead mt-4 max-w-md">Desenhamos, construímos e sustentamos software personalizado alinhado a objetivos de negócio — sem camadas extras, sem desperdício.</p>
+                    <p class="lead mt-4 max-w-md">Desenhamos, construímos e sustentamos software personalizado alinhado a objetivos de negócio, sem camadas extras e sem desperdício.</p>
                     <div class="svc-list mt-8" id="svcList">
-                        <div class="svc-item" data-svc="0">
+                        <div class="svc-item" data-svc="0" tabindex="0">
                             <span class="svc-idx">01</span>
                             <div><h4>Diagnóstico &amp; Estratégia</h4><p>Entendemos o problema, mapeamos oportunidades e definimos escopo e roadmap.</p></div>
                         </div>
-                        <div class="svc-item" data-svc="1">
+                        <div class="svc-item" data-svc="1" tabindex="0">
                             <span class="svc-idx">02</span>
                             <div><h4>Arquitetura &amp; Fundações</h4><p>Base técnica escalável, segura e observável desde o início.</p></div>
                         </div>
-                        <div class="svc-item" data-svc="2">
+                        <div class="svc-item" data-svc="2" tabindex="0">
                             <span class="svc-idx">03</span>
                             <div><h4>Desenvolvimento &amp; Integrações</h4><p>Construção em ciclos curtos, com APIs e integrações conectando os sistemas.</p></div>
                         </div>
-                        <div class="svc-item" data-svc="3">
+                        <div class="svc-item" data-svc="3" tabindex="0">
                             <span class="svc-idx">04</span>
                             <div><h4>Lançamento &amp; Go-live</h4><p>Deploy, QA, migração de dados e treinamento do time.</p></div>
                         </div>
-                        <div class="svc-item" data-svc="4">
+                        <div class="svc-item" data-svc="4" tabindex="0">
                             <span class="svc-idx">05</span>
                             <div><h4>Operação &amp; Evolução</h4><p>Monitoramento, suporte e melhoria contínua de performance.</p></div>
                         </div>
                     </div>
                 </div>
-                <!-- Direita: stack isométrico animado -->
+                <!-- Direita: stack isométrico. A base é a etapa 01 e cada etapa sobe uma camada; o logo fecha o topo. -->
                 <div class="iso-scene" id="isoScene" aria-hidden="true">
                     <div class="iso-stack">
-                        <div class="iso-layer" data-svc="0" style="--zr:156px; --zs:405px; transition-delay:0s"><span class="iso-face"></span></div>
-                        <div class="iso-layer" data-svc="1" style="--zr:78px; --zs:203px; transition-delay:.07s"><span class="iso-face"></span></div>
-                        <div class="iso-layer" data-svc="2" style="--zr:0px; --zs:0px; transition-delay:.14s"><span class="iso-face"></span></div>
-                        <div class="iso-layer" data-svc="3" style="--zr:-78px; --zs:-203px; transition-delay:.21s"><span class="iso-face"></span></div>
-                        <div class="iso-layer" data-svc="4" style="--zr:-156px; --zs:-405px; transition-delay:.28s">
+                        <div class="iso-layer" data-svc="0" style="--i:0"><span class="iso-face"></span><span class="iso-label"><b>01</b><span>Diagnóstico</span></span></div>
+                        <div class="iso-layer" data-svc="1" style="--i:1"><span class="iso-face"></span><span class="iso-label"><b>02</b><span>Arquitetura</span></span></div>
+                        <div class="iso-layer" data-svc="2" style="--i:2"><span class="iso-face"></span><span class="iso-label"><b>03</b><span>Desenvolvimento</span></span></div>
+                        <div class="iso-layer" data-svc="3" style="--i:3"><span class="iso-face"></span><span class="iso-label"><b>04</b><span>Lançamento</span></span></div>
+                        <div class="iso-layer" data-svc="4" style="--i:4">
                             <span class="iso-face"></span>
                             <img src="./assets/logo-ekatelos.png" class="iso-logo-img" alt="" loading="lazy" decoding="async" />
+                            <span class="iso-label"><b>05</b><span>Operação</span></span>
                         </div>
                     </div>
                 </div>
@@ -414,71 +548,103 @@
             <div class="mx-auto max-w-3xl text-center" data-reveal>
                 <span class="eyebrow">Plataformas &amp; Produtos</span>
                 <h2 class="section-title mt-5"><span class="title-gradient">Produtos prontos para escalar</span></h2>
-                <p class="lead mt-4">Aplicamos o que construímos diariamente para clientes: produtos enxutos, focados em resolver problemas operacionais reais e acelerar times sem dependência excessiva de implementação.</p>
+                <p class="lead mt-4">Plataformas próprias, nascidas de problemas reais de clientes e em operação todos os dias. Funcionam sozinhas ou integradas aos sistemas que você já usa.</p>
             </div>
-            <div class="product-grid mt-14">
+            <div class="prod-list mt-14">
                 <!-- Chauvet -->
-                <article class="glass glass-hover glass-glow product-card" aria-labelledby="prod-chauvet-name" data-reveal>
-                    <div class="product-top">
-                        <span class="product-num">01</span>
-                        <span class="product-badge">Flows</span>
+                <article id="prod-chauvet" class="glass prod-row" aria-labelledby="prod-chauvet-name" data-reveal>
+                    <div>
+                        <div class="kicker">
+                            <span class="icon-badge" aria-hidden="true"><i class="mdi mdi-whatsapp text-xl"></i></span>
+                            <span class="kicker-text">WhatsApp · Automação · CRM</span>
+                        </div>
+                        <h3 id="prod-chauvet-name" class="prod-name">Chauvet</h3>
+                        <p class="prod-pitch">Automações, CRM e atendimento rodando dentro do WhatsApp, pela API Oficial da Meta, sem depender de uma equipe de desenvolvimento.</p>
+                        <p class="prod-for"><b>Para quem:</b> empresas que vendem ou atendem pelo WhatsApp e precisam ganhar escala sem perder o controle das conversas.</p>
+                        <div class="feat-grid">
+                            <div class="feat"><i class="mdi mdi-sitemap-outline" aria-hidden="true"></i><h4>Fluxos e chatbots</h4><p>Construtor visual de fluxos, respostas com IA treinada no seu negócio e gatilhos ligados ao seu ERP.</p></div>
+                            <div class="feat"><i class="mdi mdi-account-group-outline" aria-hidden="true"></i><h4>CRM nativo</h4><p>Funil e histórico por contato, campanhas segmentadas e métricas em tempo real.</p></div>
+                            <div class="feat"><i class="mdi mdi-headset" aria-hidden="true"></i><h4>Central de atendimento</h4><p>Vários atendentes no mesmo número, com passagem fluida entre bot e humano.</p></div>
+                            <div class="feat"><i class="mdi mdi-cart-outline" aria-hidden="true"></i><h4>Vendas na conversa</h4><p>Catálogo, carrinho e pagamento por Pix sem o cliente sair do WhatsApp.</p></div>
+                        </div>
+                        <div class="prod-cta"><a class="pill-link" href="https://chauvet.ekatelos.com/public" target="_blank" rel="noopener">Conhecer o Chauvet <i class="mdi mdi-arrow-top-right"></i></a></div>
                     </div>
-                    <h3 id="prod-chauvet-name" class="product-name">Chauvet</h3>
-                    <p class="product-tagline">Motor de automações, CRM customizável e central de atendimentos via Whatsapp.</p>
-                    <div class="feature-list" aria-label="Principais recursos">
-                        <div class="feature-item"><i class="mdi mdi-check-bold"></i>Motor de automações e fluxos</div>
-                        <div class="feature-item"><i class="mdi mdi-check-bold"></i>CRM customizável</div>
-                        <div class="feature-item"><i class="mdi mdi-check-bold"></i>Central de atendimentos omnichannel</div>
+                    <div class="prod-visual" aria-hidden="true">
+                        <div class="mock">
+                            <div class="mock-bar"><span class="mock-dots"><b></b><b></b><b></b></span><span>chauvet · atendimento</span><span class="mock-live">API Oficial</span></div>
+                            <div class="mock-body">
+                                <div class="chat-in">Oi! Vocês têm o tênis preto no 42?</div>
+                                <div class="chat-out"><span class="chat-who">Bot</span>Temos sim! Quer ver as opções ou falar com um vendedor?</div>
+                                <div class="chat-replies"><span>Ver opções</span><span>Falar com vendedor</span></div>
+                                <div class="mock-note"><i class="mdi mdi-lightning-bolt"></i>Estoque consultado no ERP</div>
+                                <div class="chat-in">Ver opções</div>
+                                <div class="chat-out"><span class="chat-who">Bot</span>Separei 3 modelos para você. O pagamento é por Pix, aqui mesmo na conversa.</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="product-meta">
-                        <span class="tag">Chatbot</span>
-                        <span class="tag">SAC</span>
-                        <span class="tag">CRM</span>
-                        <span class="tag">Automação</span>
-                    </div>
-                    <a class="product-link" href="https://chauvet.ekatelos.com/public" target="_blank" rel="noopener">Acessar Chauvet <i class="mdi mdi-arrow-top-right"></i></a>
                 </article>
                 <!-- Akrivos -->
-                <article class="glass glass-hover glass-glow product-card" aria-labelledby="prod-akrivos-name" data-reveal>
-                    <div class="product-top">
-                        <span class="product-num">02</span>
-                        <span class="product-badge">Saúde</span>
+                <article id="prod-akrivos" class="glass prod-row" aria-labelledby="prod-akrivos-name" data-reveal>
+                    <div>
+                        <div class="kicker">
+                            <span class="icon-badge" aria-hidden="true"><i class="mdi mdi-stethoscope text-xl"></i></span>
+                            <span class="kicker-text">Saúde · Gestão de clínicas</span>
+                        </div>
+                        <h3 id="prod-akrivos-name" class="prod-name">Akrivos</h3>
+                        <p class="prod-pitch">A operação inteira da clínica em uma só tela: agenda, filas de atendimento, prontuário eletrônico, exames, convênios e financeiro, todos integrados.</p>
+                        <p class="prod-for"><b>Para quem:</b> clínicas, consultórios e redes com várias unidades que querem sair das planilhas e dos sistemas que não conversam.</p>
+                        <div class="feat-grid">
+                            <div class="feat"><i class="mdi mdi-calendar-clock" aria-hidden="true"></i><h4>Agenda e filas</h4><p>Marcação por profissional, sala e procedimento, fila em tempo real e painel de chamada na TV da recepção.</p></div>
+                            <div class="feat"><i class="mdi mdi-clipboard-pulse-outline" aria-hidden="true"></i><h4>Prontuário e exames</h4><p>Anamnese por especialidade, assinatura digital, pedidos de exame e laudos no histórico do paciente.</p></div>
+                            <div class="feat"><i class="mdi mdi-cash-multiple" aria-hidden="true"></i><h4>Financeiro completo</h4><p>Pix, boleto, cartão e carnê, clube de assinatura e repasse médico no mesmo fluxo do atendimento.</p></div>
+                            <div class="feat"><i class="mdi mdi-video-outline" aria-hidden="true"></i><h4>Paciente mais perto</h4><p>Lembretes e agendamento pelo WhatsApp, telemedicina e assistente de IA para o médico.</p></div>
+                        </div>
+                        <div class="prod-cta"><a class="pill-link" href="https://akrivos.ekatelos.com/public" target="_blank" rel="noopener">Conhecer o Akrivos <i class="mdi mdi-arrow-top-right"></i></a></div>
                     </div>
-                    <h3 id="prod-akrivos-name" class="product-name">Akrivos</h3>
-                    <p class="product-tagline">Plataforma para gestão de clínicas de saúde.</p>
-                    <div class="feature-list" aria-label="Principais recursos">
-                        <div class="feature-item"><i class="mdi mdi-check-bold"></i>Agendamento de consultas</div>
-                        <div class="feature-item"><i class="mdi mdi-check-bold"></i>Gestão de pacientes e prontuário</div>
-                        <div class="feature-item"><i class="mdi mdi-check-bold"></i>Assinaturas e gestão financeira</div>
+                    <div class="prod-visual" aria-hidden="true">
+                        <div class="mock">
+                            <div class="mock-bar"><span class="mock-dots"><b></b><b></b><b></b></span><span>akrivos · fila de atendimento</span><span class="mock-live">Ao vivo</span></div>
+                            <div class="mock-body">
+                                <div class="mock-row"><time>08:30</time><div><strong>Ana Ribeiro</strong><small>Cardiologia · Sala 3</small></div><span class="pill live">Em atendimento</span></div>
+                                <div class="mock-row"><time>09:00</time><div><strong>João Silveira</strong><small>Retorno · Convênio</small></div><span class="pill">Na recepção</span></div>
+                                <div class="mock-row"><time>09:30</time><div><strong>Marina Lopes</strong><small>Telemedicina</small></div><span class="pill">Confirmada</span></div>
+                                <div class="mock-note"><i class="mdi mdi-bullhorn-outline"></i>Painel chamou “Ana Ribeiro, sala 3”</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="product-meta">
-                        <span class="tag">Clínicas</span>
-                        <span class="tag">Agenda</span>
-                        <span class="tag">Pacientes</span>
-                        <span class="tag">Financeiro</span>
-                    </div>
-                    <a class="product-link" href="https://akrivos.ekatelos.com/public" target="_blank" rel="noopener">Acessar Akrivos <i class="mdi mdi-arrow-top-right"></i></a>
                 </article>
-                <!-- Manteio -->
-                <article class="glass glass-hover glass-glow product-card" aria-labelledby="prod-manteio-name" data-reveal>
-                    <div class="product-top">
-                        <span class="product-num">03</span>
-                        <span class="product-badge">IA</span>
+                <!-- Auxi -->
+                <article id="prod-auxi" class="glass prod-row" aria-labelledby="prod-auxi-name" data-reveal>
+                    <div>
+                        <div class="kicker">
+                            <span class="icon-badge" aria-hidden="true"><i class="mdi mdi-ticket-confirmation-outline text-xl"></i></span>
+                            <span class="kicker-text">Chamados · Campo · Financeiro</span>
+                        </div>
+                        <h3 id="prod-auxi-name" class="prod-name">Auxi</h3>
+                        <p class="prod-pitch">Do pedido de ajuda ao fechamento financeiro: o chamado entra, vira visita técnica quando precisa e termina com preço, custo e acerto registrados.</p>
+                        <p class="prod-for"><b>Para quem:</b> times de suporte e empresas de manutenção que atendem várias unidades, com técnicos próprios ou parceiros.</p>
+                        <div class="feat-grid">
+                            <div class="feat"><i class="mdi mdi-forum-outline" aria-hidden="true"></i><h4>Atendimento</h4><p>Chamados com formulário por tipo de pedido, portal do solicitante sem login, base de conhecimento e avaliação.</p></div>
+                            <div class="feat"><i class="mdi mdi-map-marker-radius-outline" aria-hidden="true"></i><h4>Serviço de campo</h4><p>Unidades, agenda, rede de fornecedores no mapa, relatório técnico e ordem de serviço.</p></div>
+                            <div class="feat"><i class="mdi mdi-finance" aria-hidden="true"></i><h4>Financeiro do chamado</h4><p>Catálogo de serviços, quanto o cliente paga e quanto o técnico recebe, fechamentos e fluxo de caixa.</p></div>
+                            <div class="feat"><i class="mdi mdi-layers-triple-outline" aria-hidden="true"></i><h4>Cresce em camadas</h4><p>Use só o atendimento ou a operação inteira: cada camada funciona sem depender da seguinte.</p></div>
+                        </div>
+                        <div class="prod-cta"><a class="pill-link" href="https://auxi.ekatelos.com/public" target="_blank" rel="noopener">Conhecer o Auxi <i class="mdi mdi-arrow-top-right"></i></a></div>
                     </div>
-                    <h3 id="prod-manteio-name" class="product-name">Manteio</h3>
-                    <p class="product-tagline">Serviços de IA personalizada para empresas.</p>
-                    <div class="feature-list" aria-label="Principais recursos">
-                        <div class="feature-item"><i class="mdi mdi-check-bold"></i>Assistentes de IA sob medida</div>
-                        <div class="feature-item"><i class="mdi mdi-check-bold"></i>Base de conhecimento (RAG)</div>
-                        <div class="feature-item"><i class="mdi mdi-check-bold"></i>Automação de processos</div>
+                    <div class="prod-visual" aria-hidden="true">
+                        <div class="mock">
+                            <div class="mock-bar"><span class="mock-dots"><b></b><b></b><b></b></span><span>auxi · chamado #1284</span><span class="mock-live">Em andamento</span></div>
+                            <div class="mock-body">
+                                <div class="mock-ticket"><strong>Ar-condicionado parado</strong><small>Loja Centro · aberto pelo QR Code da unidade</small></div>
+                                <div class="mock-steps">
+                                    <div class="mock-step done"><strong>Chamado recebido</strong><small>Atendimento · categoria Climatização</small></div>
+                                    <div class="mock-step done"><strong>Visita agendada</strong><small>Campo · técnico parceiro a 4 km, quinta às 14h</small></div>
+                                    <div class="mock-step now"><strong>Relatório técnico enviado</strong><small>Campo · ordem de serviço gerada</small></div>
+                                    <div class="mock-step"><strong>Fechamento</strong><small>Financeiro · cliente R$ 480 · técnico R$ 290</small></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="product-meta">
-                        <span class="tag">IA</span>
-                        <span class="tag">RAG</span>
-                        <span class="tag">Agents</span>
-                        <span class="tag">Beta</span>
-                    </div>
-                    <a class="product-link" href="https://manteio.ekatelos.com" target="_blank" rel="noopener">Acessar Manteio <i class="mdi mdi-arrow-top-right"></i></a>
                 </article>
             </div>
         </div>
@@ -513,51 +679,122 @@
             <div class="mx-auto max-w-3xl text-center" data-reveal>
                 <span class="eyebrow">Portfólio</span>
                 <h2 class="section-title mt-5"><span class="title-gradient">Soluções que entregamos</span></h2>
-                <p class="lead mt-4">Alguns exemplos de projetos e setores que já entregamos soluções.</p>
+                <p class="lead mt-4">Projetos em que entramos no negócio do cliente e saímos com tecnologia rodando: do hardware a bordo de um iate aos sistemas de gestão do varejo.</p>
             </div>
-            <div class="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-                <!-- Varejo -->
-                <div class="glass glass-hover glass-glow feature-card" data-reveal>
-                    <div class="icon-badge" aria-hidden="true"><i class="mdi mdi-store-outline text-2xl"></i></div>
-                    <h3 class="card-title mt-4 text-base font-semibold">Varejo</h3>
-                    <div class="text-sm font-semibold text-primary">Varejista de moda</div>
-                    <p class="card-text mt-2 text-sm">Sistema de ERP completo da empresa: ecommerce, gestão, financeiro, expedição de pedidos, automação de marketing.</p>
+
+            <!-- Case em destaque: Náutico -->
+            <article class="glass case-hero mt-14" aria-labelledby="case-nautico-title" data-reveal>
+                <div>
+                    <div class="kicker">
+                        <span class="icon-badge" aria-hidden="true"><i class="mdi mdi-ship-wheel text-xl"></i></span>
+                        <span class="kicker-text">Náutico · Hardware + Software</span>
+                    </div>
+                    <h3 id="case-nautico-title" class="case-title">Theseux: o barco inteiro na tela do comandante</h3>
+                    <p class="case-story">Em parceria com a <strong>Electra</strong>, especializada em serviços elétricos para embarcações, criamos o Theseux: um computador de bordo que se conecta à rede do barco e leva o comando dos equipamentos para a tela do painel, com um aplicativo desenhado para cada embarcação. Hoje ele navega em lanchas e iates de alto padrão.</p>
+                    <div class="feat-grid">
+                        <div class="feat"><i class="mdi mdi-chip" aria-hidden="true"></i><h4>Computador de bordo</h4><p>Hardware embarcado que conversa com a rede NMEA 2000 da embarcação.</p></div>
+                        <div class="feat"><i class="mdi mdi-monitor-dashboard" aria-hidden="true"></i><h4>Controle na tela do painel</h4><p>Iluminação, bombas, indicadores e câmeras comandados pelos displays multifuncionais.</p></div>
+                        <div class="feat"><i class="mdi mdi-pencil-ruler" aria-hidden="true"></i><h4>Aplicativo sob medida</h4><p>Portal web em que cada embarcação ganha telas, botões e indicadores próprios.</p></div>
+                        <div class="feat"><i class="mdi mdi-shield-check-outline" aria-hidden="true"></i><h4>Feito para o mar</h4><p>Funciona sem internet e só aceita a configuração assinada para aquele equipamento.</p></div>
+                    </div>
                 </div>
-                <!-- Saúde -->
-                <div class="glass glass-hover glass-glow feature-card" data-reveal>
-                    <div class="icon-badge" aria-hidden="true"><i class="mdi mdi-hospital-box-outline text-2xl"></i></div>
-                    <h3 class="card-title mt-4 text-base font-semibold">Saúde</h3>
-                    <div class="text-sm font-semibold text-primary">Clínica e plano de saúde</div>
-                    <p class="card-text mt-2 text-sm">Plataforma de atendimento, prontuário médico, agendamento, planos de assinatura, gestão financeira, telemedicina e mais.</p>
+                <div aria-hidden="true">
+                    <div class="helm">
+                        <div class="helm-screen">
+                            <div class="helm-bar"><b>Theseux</b><span>Painel de bordo</span></div>
+                            <div class="helm-grid">
+                                <div class="helm-btn on"><i class="mdi mdi-lightbulb-on-outline"></i><span>Luzes de navegação</span><b>ON</b></div>
+                                <div class="helm-btn on"><i class="mdi mdi-water-pump"></i><span>Bomba de porão</span><b>AUTO</b></div>
+                                <div class="helm-btn"><i class="mdi mdi-anchor"></i><span>Guincho da âncora</span><b>OFF</b></div>
+                                <div class="helm-btn"><i class="mdi mdi-cctv"></i><span>Câmera de popa</span><b>OFF</b></div>
+                            </div>
+                            <div class="helm-gauges">
+                                <div class="helm-gauge"><small>Água</small><strong>72%</strong><i style="--v:72%"></i></div>
+                                <div class="helm-gauge"><small>Diesel</small><strong>64%</strong><i style="--v:64%"></i></div>
+                                <div class="helm-gauge"><small>Bateria</small><strong>13,2 V</strong><i style="--v:88%"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="helm-caption">Ilustração. Cada embarcação recebe um aplicativo próprio.</p>
                 </div>
-                <!-- Náutico -->
-                <div class="glass glass-hover glass-glow feature-card" data-reveal>
-                    <div class="icon-badge" aria-hidden="true"><i class="mdi mdi-ferry text-2xl"></i></div>
-                    <h3 class="card-title mt-4 text-base font-semibold">Náutico</h3>
-                    <div class="text-sm font-semibold text-primary">Serviços elétricos para embarcações</div>
-                    <p class="card-text mt-2 text-sm">Hardware para controle de aparelhos a bordo e portal para customização do aplicativo embarcado.</p>
+                <div class="proof-grid case-wide">
+                    <div class="proof"><i class="mdi mdi-earth" aria-hidden="true"></i><div><strong>METSTRADE · Amsterdã</strong><span>Apresentado na maior feira mundial de equipamentos náuticos.</span></div></div>
+                    <div class="proof"><i class="mdi mdi-sail-boat" aria-hidden="true"></i><div><strong>São Paulo Boat Show</strong><span>Em exposição em um dos maiores salões náuticos da América Latina.</span></div></div>
+                    <div class="proof"><i class="mdi mdi-handshake-outline" aria-hidden="true"></i><div><strong>Parceria com a Electra</strong><span>Desenvolvido lado a lado com quem instala e mantém a elétrica das embarcações.</span></div></div>
                 </div>
-                <!-- Logística -->
-                <div class="glass glass-hover glass-glow feature-card" data-reveal>
-                    <div class="icon-badge" aria-hidden="true"><i class="mdi mdi-truck-outline text-2xl"></i></div>
-                    <h3 class="card-title mt-4 text-base font-semibold">Logística</h3>
-                    <div class="text-sm font-semibold text-primary">Software para transportadoras</div>
-                    <p class="card-text mt-2 text-sm">Sistema para gestão de entregas, otimização de rotas e gestão de frotas.</p>
+                <!-- Galeria de embarcações atendidas: preenchida pela lista BOATS, no script do fim da página -->
+                <div class="case-wide" id="boatGallery" hidden>
+                    <div class="boat-title">A bordo de</div>
+                    <div class="boat-track" id="boatTrack"></div>
                 </div>
-                <!-- Jurídico -->
-                <div class="glass glass-hover glass-glow feature-card" data-reveal>
-                    <div class="icon-badge" aria-hidden="true"><i class="mdi mdi-scale-balance text-2xl"></i></div>
-                    <h3 class="card-title mt-4 text-base font-semibold">Jurídico</h3>
-                    <div class="text-sm font-semibold text-primary">Escritório</div>
-                    <p class="card-text mt-2 text-sm">Plataforma de gerenciamento de processos, consulta de orgãos públicos, scraping de dados, automações e integrações.</p>
+            </article>
+
+            <!-- Histórias: Varejo e Saúde -->
+            <div class="mt-6 grid gap-6 lg:grid-cols-2">
+                <article class="glass case-card" aria-labelledby="case-varejo-title" data-reveal>
+                    <div class="kicker">
+                        <span class="icon-badge" aria-hidden="true"><i class="mdi mdi-store-outline text-xl"></i></span>
+                        <span class="kicker-text">Varejo</span>
+                    </div>
+                    <h3 id="case-varejo-title" class="case-title">Da venda à entrega</h3>
+                    <p class="case-story">Já atendemos mais de uma operação de varejo, e cada uma pediu uma coisa. Para algumas, entregamos o CRM e o aplicativo de entregas. Para uma varejista de moda fomos além: e-commerce, gestão, financeiro, expedição e automação de marketing integrados.</p>
+                    <div class="journey" aria-label="O que já construímos para o varejo">
+                        <span class="journey-step"><i class="mdi mdi-cart-outline" aria-hidden="true"></i>E-commerce</span>
+                        <span class="journey-step"><i class="mdi mdi-account-group-outline" aria-hidden="true"></i>CRM</span>
+                        <span class="journey-step"><i class="mdi mdi-cash-multiple" aria-hidden="true"></i>Financeiro</span>
+                        <span class="journey-step"><i class="mdi mdi-package-variant-closed" aria-hidden="true"></i>Expedição</span>
+                        <span class="journey-step"><i class="mdi mdi-truck-fast-outline" aria-hidden="true"></i>Entregas</span>
+                    </div>
+                </article>
+                <article class="glass case-card" aria-labelledby="case-saude-title" data-reveal>
+                    <div class="kicker">
+                        <span class="icon-badge" aria-hidden="true"><i class="mdi mdi-hospital-box-outline text-xl"></i></span>
+                        <span class="kicker-text">Saúde · Clínica e plano de saúde</span>
+                    </div>
+                    <h3 id="case-saude-title" class="case-title">Da agenda à assinatura, num lugar só</h3>
+                    <p class="case-story">Para uma clínica com plano de saúde próprio, construímos a plataforma que acompanha o paciente do início ao fim: agendamento, atendimento com prontuário médico, telemedicina, planos de assinatura e a gestão financeira de tudo isso. O que aprendemos aqui está no <a href="#prod-akrivos">Akrivos</a>.</p>
+                    <div class="journey" aria-label="Caminho do paciente">
+                        <span class="journey-step"><i class="mdi mdi-calendar-clock" aria-hidden="true"></i>Agendamento</span>
+                        <span class="journey-step"><i class="mdi mdi-clipboard-pulse-outline" aria-hidden="true"></i>Prontuário</span>
+                        <span class="journey-step"><i class="mdi mdi-video-outline" aria-hidden="true"></i>Telemedicina</span>
+                        <span class="journey-step"><i class="mdi mdi-card-account-details-outline" aria-hidden="true"></i>Assinatura</span>
+                        <span class="journey-step"><i class="mdi mdi-cash-multiple" aria-hidden="true"></i>Financeiro</span>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Demais setores -->
+            <p class="sector-label" data-reveal>Também entregamos em</p>
+            <div class="mt-6 grid gap-5 md:grid-cols-3">
+                <div class="glass glass-hover glass-glow sector-card" data-reveal>
+                    <div class="icon-badge" aria-hidden="true"><i class="mdi mdi-truck-outline text-xl"></i></div>
+                    <div>
+                        <h3 class="card-title text-base font-semibold">Logística</h3>
+                        <div class="text-sm font-semibold text-primary">Transportadoras e entregas do varejo</div>
+                        <p class="card-text mt-2 text-sm">Aplicativo de entregas, otimização de rotas e gestão de entregas e frotas.</p>
+                    </div>
                 </div>
-                <!-- Hotelaria -->
-                <div class="glass glass-hover glass-glow feature-card" data-reveal>
-                    <div class="icon-badge" aria-hidden="true"><i class="mdi mdi-bed-outline text-2xl"></i></div>
-                    <h3 class="card-title mt-4 text-base font-semibold">Hotelaria</h3>
-                    <div class="text-sm font-semibold text-primary">Rede de hostels</div>
-                    <p class="card-text mt-2 text-sm">Chatbot para check‑in/out, automações internas e comunicação com hóspedes.</p>
+                <div class="glass glass-hover glass-glow sector-card" data-reveal>
+                    <div class="icon-badge" aria-hidden="true"><i class="mdi mdi-scale-balance text-xl"></i></div>
+                    <div>
+                        <h3 class="card-title text-base font-semibold">Jurídico</h3>
+                        <div class="text-sm font-semibold text-primary">Escritório de advocacia</div>
+                        <p class="card-text mt-2 text-sm">Gestão de processos, consulta a órgãos públicos, coleta automática de dados e integrações.</p>
+                    </div>
                 </div>
+                <div class="glass glass-hover glass-glow sector-card" data-reveal>
+                    <div class="icon-badge" aria-hidden="true"><i class="mdi mdi-bed-outline text-xl"></i></div>
+                    <div>
+                        <h3 class="card-title text-base font-semibold">Hotelaria</h3>
+                        <div class="text-sm font-semibold text-primary">Rede de hostels</div>
+                        <p class="card-text mt-2 text-sm">Chatbot para check-in e check-out, automações internas e comunicação com hóspedes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 flex flex-col items-center gap-4 text-center" data-reveal>
+                <p class="text-white/80">Tem um desafio parecido no seu setor?</p>
+                <a href="#contact" class="primary-btn">Conte para a gente</a>
             </div>
         </div>
     </section>
@@ -611,7 +848,7 @@
             <div class="glass mx-auto mt-12 max-w-md p-8 flex flex-col items-center gap-6 text-center" data-reveal>
                 <div class="icon-badge !h-14 !w-14"><i class="mdi mdi-whatsapp text-3xl"></i></div>
                 <p class="text-white/80">Resposta rápida em horário comercial. Conte sobre seu projeto e receba um orçamento.</p>
-                <a href="https://api.whatsapp.com/send?phone=5511963371980&text=Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20orcamento" target="_blank" rel="noopener" class="primary-btn text-base px-8 py-4"><i class="mdi mdi-whatsapp text-xl"></i> Abrir WhatsApp</a>
+                <a href="https://api.whatsapp.com/send?phone=551148634645&text=Vim%20pelo%20site" target="_blank" rel="noopener" class="primary-btn text-base px-8 py-4"><i class="mdi mdi-whatsapp text-xl"></i> Abrir WhatsApp</a>
                 <p class="text-xs muted">Horário comercial • Resposta rápida</p>
             </div>
         </div>
@@ -633,7 +870,7 @@
                     <a class="transition hover:text-primary" href="#contact">Contato</a>
                 </div>
                 <div class="mt-8 w-full border-t border-white/10 pt-4 text-xs space-y-1 text-white/50">
-                    <div>&copy; 2025 Ekatelos LTDA. Todos os direitos reservados.</div>
+                    <div>&copy; <span id="footerYear">2026</span> Ekatelos LTDA. Todos os direitos reservados.</div>
                     <div>CNPJ: 45.643.037/0001-76</div>
                 </div>
             </div>
@@ -642,6 +879,10 @@
 
     <script>
         const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        // Rodapé: ano corrente (o número no HTML é só o valor inicial, para quem está sem JavaScript)
+        const footerYear = document.getElementById('footerYear');
+        if (footerYear) footerYear.textContent = new Date().getFullYear();
 
         // Menu mobile
         const btn = document.getElementById('menuBtn');
@@ -736,23 +977,80 @@
             if (!scene || !list) return;
             const layers = Array.from(scene.querySelectorAll('.iso-layer'));
             const items = Array.from(list.querySelectorAll('.svc-item'));
+            const area = scene.closest('.svc-layout') || scene;
+            const STEP_MS = 2600;      // tempo de cada etapa no passeio automático
+            const BUILD_MS = 1700;     // duração da montagem da pilha
+            let current = 0, timer = null, visible = false, paused = false, built = false;
+
+            // lista e camadas se encontram pelo data-svc (a ordem no DOM não importa)
+            function setActive(i) {
+                current = i;
+                items.forEach(it => it.classList.toggle('active', Number(it.dataset.svc) === i));
+                layers.forEach(ly => ly.classList.toggle('active', Number(ly.dataset.svc) === i));
+            }
+            function stop() { clearInterval(timer); timer = null; }
+            function start() {
+                if (timer || reduceMotion || !visible || paused || !built) return;
+                timer = setInterval(() => setActive((current + 1) % items.length), STEP_MS);
+            }
+            function build() {
+                if (scene.classList.contains('in')) return;
+                scene.classList.add('in');
+                setTimeout(() => { scene.classList.add('ready'); built = true; start(); }, reduceMotion ? 0 : BUILD_MS);
+            }
 
             if ('IntersectionObserver' in window) {
-                const io = new IntersectionObserver((entries) => {
-                    entries.forEach(e => { if (e.isIntersecting) { scene.classList.add('in'); io.disconnect(); } });
-                }, { threshold: 0.25 });
-                io.observe(scene);
+                new IntersectionObserver((entries) => {
+                    entries.forEach(e => {
+                        visible = e.isIntersecting;
+                        if (visible) { build(); start(); } else { stop(); }
+                    });
+                }, { threshold: 0.25 }).observe(scene);
             } else {
-                scene.classList.add('in');
+                visible = true; build();
             }
 
-            function setActive(i) {
-                items.forEach((it, idx) => it.classList.toggle('active', idx === i));
-                layers.forEach((ly, idx) => ly.classList.toggle('active', idx === i));
-            }
-            items.forEach((it, i) => it.addEventListener('mouseenter', () => setActive(i)));
-            layers.forEach((ly, i) => ly.addEventListener('mouseenter', () => setActive(i)));
+            // o passeio automático para enquanto a pessoa explora e volta quando ela sai
+            area.addEventListener('mouseenter', () => { paused = true; stop(); });
+            area.addEventListener('mouseleave', () => { paused = false; start(); });
+            const pick = (el) => () => { paused = true; stop(); setActive(Number(el.dataset.svc)); };
+            items.concat(layers).forEach(el => {
+                el.addEventListener('mouseenter', pick(el));
+                el.addEventListener('click', pick(el));
+            });
+            items.forEach(it => it.addEventListener('focus', pick(it)));
             setActive(0);
+        })();
+
+        // Portfólio náutico: galeria de embarcações atendidas.
+        // Para exibir, coloque as fotos em ./assets/nautico/ e liste cada uma aqui. Sem itens, a galeria não aparece.
+        const BOATS = [
+            // { img: './assets/nautico/arquivo.jpg', nome: 'Modelo da embarcação', detalhe: 'Ex.: 62 pés · painel completo' },
+        ];
+        (function() {
+            const gallery = document.getElementById('boatGallery');
+            const track = document.getElementById('boatTrack');
+            if (!gallery || !track || !BOATS.length) return;
+            BOATS.forEach((boat) => {
+                const figure = document.createElement('figure');
+                figure.className = 'boat';
+                const img = document.createElement('img');
+                img.src = boat.img;
+                img.alt = boat.nome || 'Embarcação atendida';
+                img.loading = 'lazy';
+                img.decoding = 'async';
+                // foto que não carrega some, em vez de deixar um quadro quebrado
+                img.addEventListener('error', () => { figure.remove(); if (!track.children.length) gallery.hidden = true; });
+                figure.appendChild(img);
+                if (boat.nome || boat.detalhe) {
+                    const caption = document.createElement('figcaption');
+                    if (boat.nome) { const name = document.createElement('strong'); name.textContent = boat.nome; caption.appendChild(name); }
+                    if (boat.detalhe) { const detail = document.createElement('span'); detail.textContent = boat.detalhe; caption.appendChild(detail); }
+                    figure.appendChild(caption);
+                }
+                track.appendChild(figure);
+            });
+            gallery.hidden = false;
         })();
 
         // Especialidades: círculo com labels e bolinhas posicionadas via JS
